@@ -54,102 +54,233 @@
 <main>
     <div class="projects">
         <div class="projects__wrapper">
-            <div class="projects__title">Всі проекти</div>
-            <div class="projects__items">
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item5.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Виробництво велосипедів</div>
-                        <div class="item__author">Адам Сміт</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+            <ul class="projects__tabs tabs">
+                <li class="tabs__item active">
+                    <a href="#tab_1" class="tabs__link">Нові (21)</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#tab_2" class="tabs__link">Популярні (16)</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#tab_3" class="tabs__link">Активні (67)</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#tab_4" class="tabs__link">Закінчені (100)</a>
+                </li>
+            </ul>
+            <div class="boxTabContent">
+                <div class="projects__items" id="tab_1">
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item5.jpg" alt="">
                         </div>
-                        <div class="item__donate">Зібрано 99 тис. грн <span class="item__percent">97%</span></div>
-                        <div class="item__to">Залишилось 1 день</div>
-                        <div class="item__category"><a href="">Виробництво</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
+                        <div class="item__info">
+                            <div class="item__title">Виробництво велосипедів</div>
+                            <div class="item__author">Адам Сміт</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 99 тис. грн <span class="item__percent">97%</span></div>
+                            <div class="item__to">Залишилось 1 день</div>
+                            <div class="item__category"><a href="">Виробництво</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item2.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Мікро лазери</div>
+                            <div class="item__author">Science.de</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">17%</span></div>
+                            <div class="item__to">Залишилось 29 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item3.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Робототехніка для дітей</div>
+                            <div class="item__author">Science.de</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 120 тис. грн <span class="item__percent">57%</span></div>
+                            <div class="item__to">Залишилось 14 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item1.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Розробка нової формули ліків</div>
+                            <div class="item__author">Олег Де</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 45 тис. грн <span class="item__percent">27%</span></div>
+                            <div class="item__to">Залишилось 30 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item4.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Натуральна косметика</div>
+                            <div class="item__author">Мардж Сімпсон</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">37%</span></div>
+                            <div class="item__to">Залишилось 17 днів</div>
+                            <div class="item__category"><a href="">Косметика</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item6.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Трав’яні чаї</div>
+                            <div class="item__author">Марта Ку</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 25 тис. грн <span class="item__percent">87%</span></div>
+                            <div class="item__to">Залишилось 3 дні</div>
+                            <div class="item__category"><a href="">Здоров'я</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
                     </div>
                 </div>
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item2.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Мікро лазери</div>
-                        <div class="item__author">Science.de</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+                <div class="projects__items" id="tab_2">
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item5.jpg" alt="">
                         </div>
-                        <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">17%</span></div>
-                        <div class="item__to">Залишилось 29 днів</div>
-                        <div class="item__category"><a href="">Технології</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
+                        <div class="item__info">
+                            <div class="item__title">Виробництво велосипедів</div>
+                            <div class="item__author">Адам Сміт</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 99 тис. грн <span class="item__percent">97%</span></div>
+                            <div class="item__to">Залишилось 1 день</div>
+                            <div class="item__category"><a href="">Виробництво</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item2.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Мікро лазери</div>
+                            <div class="item__author">Science.de</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">17%</span></div>
+                            <div class="item__to">Залишилось 29 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item6.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Трав’яні чаї</div>
+                            <div class="item__author">Марта Ку</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 25 тис. грн <span class="item__percent">87%</span></div>
+                            <div class="item__to">Залишилось 3 дні</div>
+                            <div class="item__category"><a href="">Здоров'я</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
                     </div>
                 </div>
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item3.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Робототехніка для дітей</div>
-                        <div class="item__author">Science.de</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+                <div class="projects__items" id="tab_3">
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item3.jpg" alt="">
                         </div>
-                        <div class="item__donate">Зібрано 120 тис. грн <span class="item__percent">57%</span></div>
-                        <div class="item__to">Залишилось 14 днів</div>
-                        <div class="item__category"><a href="">Технології</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
-                    </div>
-                </div>
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item1.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Розробка нової формули ліків</div>
-                        <div class="item__author">Олег Де</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+                        <div class="item__info">
+                            <div class="item__title">Робототехніка для дітей</div>
+                            <div class="item__author">Science.de</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 120 тис. грн <span class="item__percent">57%</span></div>
+                            <div class="item__to">Залишилось 14 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
                         </div>
-                        <div class="item__donate">Зібрано 45 тис. грн <span class="item__percent">27%</span></div>
-                        <div class="item__to">Залишилось 30 днів</div>
-                        <div class="item__category"><a href="">Технології</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
                     </div>
-                </div>
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item4.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Натуральна косметика</div>
-                        <div class="item__author">Мардж Сімпсон</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item1.jpg" alt="">
                         </div>
-                        <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">37%</span></div>
-                        <div class="item__to">Залишилось 17 днів</div>
-                        <div class="item__category"><a href="">Косметика</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
-                    </div>
-                </div>
-                <div class="projects__item item">
-                    <div class="item__img">
-                        <img src="img/item6.jpg" alt="">
-                    </div>
-                    <div class="item__info">
-                        <div class="item__title">Трав’яні чаї</div>
-                        <div class="item__author">Марта Ку</div>
-                        <div class="item__progress">
-                            <div class="item__bar"></div>
+                        <div class="item__info">
+                            <div class="item__title">Розробка нової формули ліків</div>
+                            <div class="item__author">Олег Де</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 45 тис. грн <span class="item__percent">27%</span></div>
+                            <div class="item__to">Залишилось 30 днів</div>
+                            <div class="item__category"><a href="">Технології</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
                         </div>
-                        <div class="item__donate">Зібрано 25 тис. грн <span class="item__percent">87%</span></div>
-                        <div class="item__to">Залишилось 3 дні</div>
-                        <div class="item__category"><a href="">Здоров'я</a></div>
-                        <div class="item__like"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item4.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Натуральна косметика</div>
+                            <div class="item__author">Мардж Сімпсон</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 20 тис. грн <span class="item__percent">37%</span></div>
+                            <div class="item__to">Залишилось 17 днів</div>
+                            <div class="item__category"><a href="">Косметика</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="projects__item item">
+                        <div class="item__img">
+                            <img src="img/item6.jpg" alt="">
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Трав’яні чаї</div>
+                            <div class="item__author">Марта Ку</div>
+                            <div class="item__progress">
+                                <div class="item__bar"></div>
+                            </div>
+                            <div class="item__donate">Зібрано 25 тис. грн <span class="item__percent">87%</span></div>
+                            <div class="item__to">Залишилось 3 дні</div>
+                            <div class="item__category"><a href="">Здоров'я</a></div>
+                            <div class="item__like"><i class="fas fa-heart"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>

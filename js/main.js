@@ -1,5 +1,14 @@
 //slick slider
 $(function () {
+    $('.tabs a').click(function () {
+        $(this).parents('.projects__wrapper').find('.projects__items').addClass('hide');
+        $(this).parent().siblings().removeClass('active');
+        var id = $(this).attr('href');
+        $(id).removeClass('hide');
+        $(this).parent().addClass('active');
+        return false;
+    });
+
     $('.slider__items').slick({
         arrows: false,
         slidesToShow: 8,
