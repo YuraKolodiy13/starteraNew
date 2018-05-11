@@ -1,4 +1,8 @@
-//slick slider
+//tabs and slick slider
+let items = document.querySelectorAll('.projects__items');
+[...items].forEach((item) => item.classList.add('hide'));
+items[0].classList.remove('hide');
+
 $(function () {
     $('.tabs a').click(function () {
         $(this).parents('.projects__wrapper').find('.projects__items').addClass('hide');
