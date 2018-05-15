@@ -31,7 +31,8 @@ body{
 
 /* ----------------------------header  ------------------------       */
 .header{
-    background: url("../img/header-bg.png") no-repeat right top;
+    /*background: url("../img/header-bg.png") no-repeat right top;*/
+    /*background-size: contain;*/
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -50,7 +51,16 @@ body{
 .header__info{
     width: 50%;
     margin-bottom: 50px;
-    position: relative
+}
+.header__img{
+    width: 60%;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    text-align: right;
+}
+.header__img img{
+    max-width: 100%;
 }
 .header__info h2{
     font-size: 123px;
@@ -172,8 +182,7 @@ body{
     display: none;
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30px;
 }
 .navMain__btn:active,
 .navMain__btn:focus{
@@ -181,7 +190,7 @@ body{
 }
 .navMain__btn span{
     height: 3px;
-    background-color: #fff;
+    background-color: #9aca3c;
     display: block;
     width: 30px;
     position: relative;
@@ -191,7 +200,7 @@ body{
     content: '';
     position: absolute;
     height: 3px;
-    background-color: #fff;
+    background-color: #9aca3c;
     top: -8px;
     left: 0;
     width: 30px;
@@ -207,7 +216,7 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 63%;
-    margin: 0 10px 0 0;
+    margin: 0 20px 0 0;
 }
 .navMain a{
     font-size: 27px;
@@ -245,6 +254,11 @@ body{
     font-size: 25px;
     letter-spacing: .005em;
 }
+.userBlock{
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+}
 .userBlock a{
     color: #2a2a2a;
 }
@@ -253,14 +267,14 @@ a.userBlock__name{
     padding-right: 55px;
 }
 /*.userBlock__name::after{*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*right: -5px;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*background: url("../img/user.png") no-repeat;*/
+/*content: '';*/
+/*position: absolute;*/
+/*right: -5px;*/
+/*top: 50%;*/
+/*transform: translateY(-50%);*/
+/*width: 40px;*/
+/*height: 40px;*/
+/*background: url("../img/user.png") no-repeat;*/
 /*}*/
 .user__wrapper{
     display: flex;
@@ -273,6 +287,7 @@ a.userBlock__name{
     border: 2px solid #2a2a2a;
     border-radius: 40px;
     position: relative;
+    z-index: 10;
     left: 20px;
     overflow: hidden;
     margin-top: 6px;
@@ -302,7 +317,7 @@ a.userBlock__name{
     border: none;
     background: transparent;
     color: #2a2a2a;
-    padding: 10px;
+    padding: 7px 10px;
     font-size: 20px;
 }
 .search-box:focus {
@@ -357,8 +372,8 @@ a.userBlock__name{
 
 .open {
     margin: 0;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 40px;
     border-radius: 60px;
 }
 .open:before {
@@ -681,6 +696,7 @@ a.userBlock__name{
     font-size: 24px;
     line-height: 48px;
     transform: skew(25deg);
+    box-sizing: border-box;
 }
 .subscribe label:hover{
     border-color: #9aca3c;
@@ -695,6 +711,9 @@ a.userBlock__name{
     transform: skew(-25deg);
     transition: .5s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .subscribe button{
     border: none;
@@ -849,3 +868,739 @@ a.userBlock__name{
     margin: 0 -35px;
 }
 
+
+/*-----------------------media queries-------------------------------------*/
+@media (max-width: 1750px){
+    .header{
+        /*background-size: 80%;*/
+        /*background-size: 1000px 1000px;*/
+    }
+    .header__wrapper{
+        max-width: none;
+        padding: 0 50px;
+    }
+    .header__info h2{
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .header__info span{
+        font-size: 40px;
+    }
+    .header__info, .header__img{
+        margin: 0;
+    }
+    .header__links a{
+        padding: 10px 0 10px 50px;
+        border-radius: 50px;
+        font-size: 20px;
+        width: 200px;
+    }
+    .header__links{
+        margin-top: 50px;
+    }
+    .header__links .add::before,
+    .header__links .add::after,
+    .header__links .toSupport::before{
+        width: 23px;
+    }
+    .header__links .toSupport::after{
+        width: 10px;
+        height: 10px;
+    }
+    .navMain{
+        max-width: none;
+        margin-bottom: 50px;
+    }
+    .navMain a{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .navMain li{
+        width: auto;
+    }
+    .userBlock{
+        width: 190px;
+    }
+    .userBlock__name::after{
+        background-size: 70%;
+        margin-top: 5px;
+    }
+    .search,
+    .search.open{
+        margin-top: -4px;
+    }
+    .search{
+        left: 0;
+    }
+    .projects{
+        padding: 0;
+    }
+    .projects::before{
+        height: 120px;
+        top: -119px;
+    }
+    .projects::after{
+        height: 120px;
+        bottom: -119px;
+    }
+    .projects__wrapper{
+        max-width: none;
+        padding: 0 50px;
+    }
+    .item{
+        width: 30%;
+        margin-bottom: 40px;
+    }
+    .item__img{
+        max-height: 200px;
+    }
+    .item__info{
+        padding: 20px 15px;
+        font-size: 18px;
+        line-height: 24px;
+        color: #2a2a2a;
+    }
+    .item__category{
+        bottom: 20px;
+    }
+    .partners{
+        padding: 50px 50px;
+        margin: 50px 0;
+        max-width: none;
+    }
+    .slider__items{
+        max-width: none;
+        padding: 0 50px;
+    }
+    .slider__item,
+    .slider__item:nth-child(odd){
+        margin-right: 0;
+    }
+    .slider__item img{
+        margin: auto;
+    }
+    .subscribe{
+        padding: 0 50px;
+        max-width: none;
+    }
+    .subscribe__title{
+        font-size: 38px;
+        line-height: 45px;
+    }
+    .subscribe input{
+        width: 220px;
+        padding: 10px 25px 10px 30px;
+        font-size: 20px;
+        line-height: 30px;
+        margin-right: 10px;
+    }
+    .subscribe button{
+        width: 160px;
+        padding: 15px;
+        font-size: 20px;
+        color: #ffffff;
+        position: static;
+    }
+    .partners__title{
+        margin-bottom: 40px;
+    }
+    .footer__wrapper{
+        padding: 0 50px;
+        max-width: none;
+    }
+    .footerNav{
+        justify-content: space-around;
+    }
+    .footerNav p{
+        font-size: 22px;
+        line-height: 50px;
+    }
+    .footerNav p::before{
+        left: -25px;
+        width: 40px;
+    }
+    .social{
+        position: static;
+    }
+    .social__btn{
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    .footer::before{
+        height: 120px;
+        top: -119px;
+    }
+    .footerNav__item{
+        width: 33%;
+    }
+    .footer__nav .footerNav__item:last-child{
+        position: static;
+    }
+    .footer__nav{
+        margin-bottom: 0;
+    }
+    .slider__item,
+    .slider__item:nth-child(even){
+        margin-right: 0;
+    }
+    .slider__item:first-child{
+        margin-left: 0;
+    }
+}
+@media (max-width: 1399px) {
+    .projects__items{
+        padding: 0;
+    }
+    .item__title{
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .subscribe{
+        margin-bottom: 200px;
+    }
+    .subscribe__title,
+    .partners__title{
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 50px;
+    }
+    .subscribe label{
+        width: 265px;
+        padding: 5px 15px 5px 15px;
+    }
+}
+@media (max-width: 1199px){
+    .header__wrapper{
+        max-width: 1170px;
+        margin-top: 20px;
+    }
+    .header__info h2{
+        margin-bottom: 20px;
+    }
+    .header__img{
+        bottom: -20px;
+    }
+    .header__links{
+        justify-content: flex-start;
+        position: absolute;
+        z-index: 10;
+        bottom: 80px;
+    }
+    .header__links .add{
+        margin-right: 20px;
+    }
+    .header__links a{
+        width: 120px;
+        font-size: 15px;
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+    .header__links .add a::before,
+    .header__links .add a::after,
+    .header__links .toSupport a::before{
+        right: -10px;
+        width: 22px;
+    }
+    .header__links .toSupport a::after{
+        right: -10px;
+        width: 13px;
+        height: 13px;
+    }
+    .header__links .add::before,
+    .header__links .add::after,
+    .header__links .toSupport::before{
+        width: 18px;
+    }
+    .navMain{
+        max-width: none;
+    }
+    .navMain a{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .navMain a.active::after,
+    .navMain ul a:hover::after{
+        height: 4px;
+    }
+    .navMain ul{
+        margin-right: 0;
+    }
+    .userBlock{
+        width: 150px;
+    }
+    .userBlock__name::after{
+        background-size: 60%;
+        margin-top: 7px;
+    }
+    .search{
+        width: 40px;
+        height: 25px;
+    }
+    .search-icon{
+        width: 13px;
+        height: 13px;
+    }
+    .search-button{
+        right: -8px;
+        top: -7px;
+    }
+    .search-icon:before{
+        height: 10px;
+        right: -6px;
+    }
+    .search.open{
+        height: 30px;
+        width: 180px;
+    }
+    .open .search-icon::before{
+        height: 13px;
+        right: 5px;
+        top: -6px;
+    }
+    .tabs__link{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .projects::before{
+        height: 80px;
+        top: -79px;
+    }
+    .projects::after{
+        height: 80px;
+        bottom: -79px;
+    }
+    .item{
+        width: 48%;
+        max-width: 440px;
+    }
+    .item__info{
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .item__title{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .item__donate,
+    .item__donate .item__in{
+        font-size: 15px;
+    }
+    .item__category{
+        right: 15px;
+    }
+    .partners__title{
+        margin-bottom: 30px;
+    }
+    .projects__all a::before,
+    .partners__link a::before{
+        width: 30px;
+        height: 2px;
+    }
+    .projects__all a::after,
+    .partners__link a::after{
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+    .projects__all a,
+    .partners__link a{
+        padding-right: 50px;
+    }
+    .slider__items{
+        margin-bottom: 50px;
+    }
+    .subscribe{
+        margin-bottom: 120px;
+    }
+    .footer{
+        padding-bottom: 30px;
+    }
+    .footer::before{
+        height: 80px;
+        top: -79px;
+    }
+    .footerNav p{
+        font-size: 20px;
+        line-height: 40px;
+        padding-left: 10px;
+    }
+    .footerNav p::before{
+        width: 30px;
+    }
+    .footerNav__item{
+        width: 30%;
+    }
+    .footerNav li > a{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .footerNav__item span{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .footer__info{
+        margin: 30px -20px 0;
+    }
+    .social{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 991px){
+    .header__info h2{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .header__info span{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .header__info p{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .header__links a{
+        padding: 0 20px;
+    }
+    .navMain__wrapper{
+        width: 60%;
+    }
+    .navMain ul{
+        width: 100%;
+    }
+    .navMain__logo{
+        margin-right: 100px;
+    }
+    .footerNav p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .footerNav p::before{
+        width: 20px;
+    }
+    .footerNav__item{
+        width: 30%;
+    }
+    .footerNav li > a{
+        font-size: 16px;
+    }
+    .footerNav__item span{
+        font-size: 14px;
+    }
+    .footerNav p{
+        padding: 0;
+    }
+    .footerNav p::before{
+        display: none;
+    }
+    .social__btn{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .item__info{
+        font-size: 14px;
+    }
+    .user__wrapper{
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .header__img{
+        width: 90%;
+    }
+    .header__img img{
+        max-width: 80%;
+    }
+    .header__info{
+        width: 60%;
+    }
+    .navMain__logo{
+        margin-right: 20px;
+    }
+    .navMain__btn{
+        display: block;
+        transition: .5s;
+    }
+    .navMain__btn.open span{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .navMain__btn.open span::before{
+        left: 50%;
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .navMain__btn.open span::after{
+        left: 50%;
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    .navMain ul{
+        transform: translate(100%, 65px);
+        opacity: 0;
+        transition: .5s;
+    }
+    .navMain{
+        top: 0;
+        overflow-x: hidden;
+        padding: 15px 0 50px;
+        margin-bottom: 0;
+    }
+    .navMain ul.visible{
+        transform: translate(0, 65px);
+        opacity: 1;
+        padding: 0;
+    }
+    .user__wrapper{
+        top: 0;
+        right: 0;
+    }
+    .navMain a{
+        padding: 5px;
+    }
+    .userBlock a{
+        padding-right: 30px;
+    }
+    .header__wrapper{
+        margin-top: 0;
+    }
+    .header__links{
+        flex-direction: column;
+    }
+    .header__links a{
+        width: 120px;
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    .header__links .add{
+        margin-bottom: 20px;
+    }
+    .header__links .add::before,
+    .header__links .add::after{
+        right: 10px;
+    }
+    .header__links .add::before,
+    .header__links .add::after,
+    .header__links .toSupport::before{
+        width: 15px;
+    }
+    .partners__title{
+        text-align: center;
+    }
+    .footerNav__item{
+        width: 48%;
+        text-align: center;
+    }
+    .footer__nav{
+        flex-wrap: wrap;
+    }
+    .header__wrapper{
+        padding: 0 23px;
+    }
+    .projects__wrapper{
+        padding: 0 30px;
+    }
+    .userBlock__name::after{
+        right: -20px;
+    }
+    .subscribe label,
+    .btn__wrap{
+        width: 220px;
+    }
+    .tabs__link{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 579px) {
+    .header{
+        margin-bottom: 0;
+    }
+    .header__wrapper{
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+    .header__info{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .header__info p{
+        margin-bottom: 30px;
+    }
+    .header__img{
+        width: 100%;
+    }
+    .header__links{
+        bottom: 130px;
+    }
+    .navMain__wrapper{
+        width: 100%;
+    }
+    .item{
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 30px;
+    }
+    .navMain{
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    .navMain__logo{
+        margin: auto;
+    }
+    .search{
+        height: 30px;
+        width: 50px;
+    }
+    .search.open {
+        width: 150px;
+        height: 30px;
+    }
+    .search-button{
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        top: 0;
+    }
+    .userBlock{
+        box-shadow: none;
+    }
+    .search-icon:before{
+        height: 12px;
+        right: -6px;
+        top: 6px;
+    }
+    .search-icon{
+        width: 10px;
+        height: 10px;
+    }
+    .search-box{
+        font-size: 14px;
+    }
+    .open .search-icon{
+        width: 18px;
+    }
+    .userBlock{
+        width: 120px;
+    }
+    .navMain a{
+        font-size: 15px;
+        padding: 0;
+    }
+    .userBlock__name::after{
+        background-size: 40%;
+        margin-top: 11px;
+    }
+    .userBlock a{
+        padding-right: 30px;
+    }
+    .header__title{
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .header__info p{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .projects__wrapper{
+        padding: 0 20px;
+    }
+    .projects__title{
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .projects__all{
+        text-align: center;
+    }
+    .projects__all a{
+        padding: 0;
+        position: relative;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .projects__all a::after,
+    .projects__all a::before{
+        right: -25px;
+    }
+    .projects__all a::before{
+        width: 20px;
+        height: 1px;
+    }
+    .projects__all a::after{
+        width: 8px;
+        height: 8px;
+        border-width: 1px;
+    }
+    .projects__all a:hover::before,
+    .projects__all a:hover::after{
+        right: -35px;
+    }
+    .projects::after{
+        height: 60px;
+        bottom: -60px;
+    }
+    .projects{
+        margin: 0;
+    }
+    .partners{
+        margin-bottom: 0;
+    }
+    .partners__title{
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+    .subscribe{
+        margin-bottom: 100px;
+    }
+    .subscribe__title{
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .subscribe label{
+        margin: 0 0 20px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footerNav__item{
+        width: 100%;
+    }
+    .social{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .social__btn{
+        margin: 10px;
+    }
+    .footer__info{
+        font-size: 12px;
+    }
+    .footer__copyright{
+        width: 55%;
+    }
+    .projects::before,
+    .footer::before{
+        height: 40px;
+        top: -39px;
+    }
+    .projects::after{
+        height: 40px;
+        bottom: -39px;
+    }
+}

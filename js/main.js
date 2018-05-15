@@ -1,7 +1,13 @@
-//tabs and slick slider
+//tabs and partners slider
 let items = document.querySelectorAll('.projects__items');
 [...items].forEach((item) => item.classList.add('hide'));
 items[0].classList.remove('hide');
+
+let tabs = document.querySelectorAll('.tabs__link');
+for (let i = 0; i < tabs.length; i++){
+    tabs[i].innerHTML += ' (' + items[i].children.length + ')';
+}
+
 
 $(function () {
     $('.tabs a').click(function () {
@@ -60,3 +66,12 @@ let expand = () =>{
     [...item].forEach(i => i.style.display = '');
 };
 search.addEventListener('click', expand);
+
+//burger
+let burger = document.querySelector('.navMain__btn');
+let navList = document.querySelector('.navMain ul');
+
+burger.addEventListener('click', function () {
+    this.classList.toggle('open');
+    navList.classList.toggle('visible')
+});
