@@ -31,8 +31,6 @@ body{
 
 /* ----------------------------header  ------------------------       */
 .header{
-    /*background: url("../img/header-bg.png") no-repeat right top;*/
-    /*background-size: contain;*/
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -40,7 +38,7 @@ body{
     padding-bottom: 150px;
 }
 .header__wrapper{
-    max-width: 1700px;
+    max-width: 1670px;
     margin: 50px auto 0;
     display: flex;
     justify-content: space-between;
@@ -49,7 +47,7 @@ body{
     width: 100%;
 }
 .header__info{
-    width: 50%;
+    width: 43%;
     margin-bottom: 50px;
 }
 .header__img{
@@ -66,7 +64,9 @@ body{
     font-size: 123px;
     line-height: 128px;
     color: #9aca3c;
-    margin: 0 0 40px;
+    margin: 0;
+    font-family: 'SFProDisplayMedium', Arial, sans-serif;
+    font-weight: normal;
 }
 .header__info span{
     font-size: 59px;
@@ -78,19 +78,35 @@ body{
     color: #9d9d9d;
     margin: 0 0 100px;
     padding: 0 15px;
+    letter-spacing: .04em;
 }
 .header__links{
     display: flex;
     margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
 }
 .header__links span{
-    transform: skew(-25deg);
+    transform: skew(-27deg);
     display: block;
     box-shadow: 0 11px 24px 0 rgba(35, 33, 41, 0.06);
 }
 .header__links .add{
     background-color: #9aca3c;
-    margin-right: 50px;
+    margin-right: 80px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__links .toSupport{
+    transition: 1s;
+}
+.header__links .toSupport:hover{
+    background-color: #9aca3c;
+}
+.header__links .add:hover{
+    background-color: #fff;
 }
 .header__links a{
     display: flex;
@@ -98,25 +114,32 @@ body{
     text-decoration: none;
     padding: 17px 0 17px 35px;
     font-family: 'SFProDisplayLight', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     position: relative;
     transition: .5s;
-    letter-spacing: .01em;
-    width: 300px;
-    transform: skew(25deg);
+    letter-spacing: .05em;
+    width: 320px;
+    transform: skew(27deg);
+    box-sizing: border-box;
 }
 .header__links .add a{
     color: #fffefe;
 }
-.header__links .toSupport a{
+.header__links .add a:hover{
     color: #9aca3c;
 }
-
+.header__links .toSupport a{
+    color: #9aca3c;
+    padding-left: 55px;
+}
+.header__links .toSupport a:hover{
+    color: #ffffff;
+}
 .header__links .add a::before,
 .header__links .add a::after{
     content: '';
     position: absolute;
-    right: 30px;
+    right: 35px;
     top: 50%;
     transform: translateY(-50%);
     width: 33px;
@@ -130,10 +153,10 @@ body{
 .header__links .toSupport a::before{
     content: '';
     position: absolute;
-    right: 32px;
-    top: 51%;
+    right: 45px;
+    top: 56%;
     transform: translateY(-50%);
-    width: 32px;
+    width: 34px;
     height: 2px;
     background-color: #9aca3c;
     transition: .5s;
@@ -141,8 +164,8 @@ body{
 .header__links .toSupport a::after{
     content: '';
     position: absolute;
-    right: 34px;
-    top: 52%;
+    right: 46px;
+    top: 57%;
     transform: translateY(-50%) rotate(45deg);
     width: 17px;
     height: 17px;
@@ -153,9 +176,19 @@ body{
 }
 .header__links .add a:hover::before{
     transform: rotate(90deg);
+    background-color: #9aca3c;
 }
 .header__links .add a:hover::after{
     transform: rotate(180deg);
+    background-color: #9aca3c;
+}
+.header__links .toSupport a:hover::before{
+    background-color: #fff;
+    right: 35px;
+}
+.header__links .toSupport a:hover::after{
+    border-color: #fff;
+    right: 36px;
 }
 
 /*-----------------------------------nav--------------------------*/
@@ -164,11 +197,12 @@ body{
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-top: -15px;
 }
 .navMain{
     width: 100%;
-    max-width: 1700px;
-    margin: 0 auto 100px;
+    max-width: 1670px;
+    margin: 0 auto 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -221,9 +255,9 @@ body{
     margin: 0 20px 0 0;
 }
 .navMain a{
-    font-size: 27px;
+    font-size: 25px;
     line-height: 51px;
-    color: #313131;
+    color: #2a2a2a;
     letter-spacing: .01em;
     text-decoration: none;
 }
@@ -238,7 +272,7 @@ body{
 }
 .navMain a.active,
 .navMain ul a:hover{
-    font-family: 'SFProDisplayBold', sans-serif;
+    font-family: 'SFProDisplayBold', Arial, sans-serif;
     letter-spacing: .05em;
     padding: 0;
 }
@@ -250,6 +284,9 @@ body{
     background-color: #fff200;
     display: block;
     transform: skew(-45deg);
+}
+.navMain__logo{
+    padding-left: 8px;
 }
 .navMain__logo a{
     text-transform: uppercase;
@@ -268,6 +305,10 @@ body{
 a.userBlock__name{
     position: relative;
     padding-right: 55px;
+    transition: .3s;
+}
+a.userBlock__name:hover{
+    color: #9aca3c;
 }
 .userBlock__name::after{
     content: '';
@@ -295,7 +336,7 @@ a.userBlock__name{
 
 .search {
     width: 60px;
-    height: 35px;
+    height: 40px;
     border: 2px solid #2a2a2a;
     border-radius: 40px;
     position: relative;
@@ -304,27 +345,24 @@ a.userBlock__name{
     overflow: hidden;
     margin-top: 6px;
     transition: all .5s ease;
-
+    box-sizing: border-box;
 }
-.search:hover{
-    border-color: #C58D06;
+.search:hover,
+.search:hover .search-icon{
+    border-color: #9aca3c;
 }
-
 .search.open {
     width: 220px;
-    height: 35px;
+    height: 40px;
     margin-top: 6px;
-    border-color: #C58D06;
+    border-color: #9aca3c;
 }
 .search.open:before {
     height: 60px;
     margin: 20px 0 20px 30px;
     position: absolute;
 }
-
 .search-box {
-    /*width: 100%;*/
-    /*height: 100%;*/
     box-shadow: none;
     border: none;
     background: transparent;
@@ -335,18 +373,16 @@ a.userBlock__name{
 .search-box:focus {
     outline: none;
 }
-
 .search-button {
     width: 30px;
     height: 30px;
     display: block;
     position: absolute;
-    right: 5px;
+    right: 2px;
     top: -4px;
     padding: 10px;
     cursor: pointer;
 }
-
 .search-icon {
     width: 18px;
     height: 18px;
@@ -356,7 +392,12 @@ a.userBlock__name{
     position: relative;
     transition: all .5s ease;
 }
-.search-icon:before {
+.search:hover .search-icon::before,
+.open .search-button:hover .search-icon,
+.open .search-button:hover .search-icon::before{
+    background-color: #9aca3c;
+}
+.search-icon::before {
     content: '';
     width: 2px;
     height: 15px;
@@ -381,7 +422,6 @@ a.userBlock__name{
     top: -8px;
     transform: none;
 }
-
 .open {
     margin: 0;
     width: 50px;
@@ -422,14 +462,14 @@ a.userBlock__name{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
 .projects__wrapper{
-    max-width: 1700px;
+    max-width: 1670px;
     margin: auto;
 }
 .projects__items{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 35px;
+    padding: 0 20px;
 }
 .projects__title{
     font-size: 48px;
@@ -440,14 +480,14 @@ a.userBlock__name{
     width: 487px;
     box-shadow: 0 4px 6px 0 rgba(41, 41, 41, 0.14);
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     transition: .2s;
 }
 .item:hover{
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .5);
 }
 .item__img{
-    max-height: 270px;
+    max-height: 295px;
     overflow: hidden;
 }
 .item__img img{
@@ -455,27 +495,32 @@ a.userBlock__name{
     height: 100%;
 }
 .item__info{
-    padding: 40px 25px 28px 20px;
+    padding: 10px 23px 20px 25px;
     font-size: 18px;
     line-height: 24px;
     color: #2a2a2a;
 }
 .item__title{
-    font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 51px;
+}
+.item__author{
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'SFProDisplayLight', Arial, sans-serif;
+    margin-bottom: 15px;
 }
 .item__donate{
-    font-size: 18px;
-    color: #2a2a2a;
-    margin-bottom: 15px;
-    font-family: 'SFProDisplayRegular', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 65px;
+    color: #1f1f1f;
     display: flex;
 }
 .item__percent{
-    color: #aba9a9;
+    color: #b6b6b6;
     font-family: 'SFProDisplayLight', Arial, sans-serif;
     margin-left: auto;
+    font-size: 18px;
 }
 .item__to{
     color: #bcbaba;
@@ -485,7 +530,7 @@ a.userBlock__name{
     height: 4px;
     width: 100%;
     background-color: #d7d7d7;
-    margin: 32px 0 30px;
+    margin: 3px 0 30px;
 }
 .item__bar{
     height: 4px;
@@ -493,8 +538,8 @@ a.userBlock__name{
 }
 .item__category{
     position: absolute;
-    bottom: 28px;
-    right: 30px;
+    bottom: 20px;
+    right: 23px;
     font-family: 'SFProDisplayLight', Arial, sans-serif;;
 }
 .item__category a{
@@ -503,8 +548,8 @@ a.userBlock__name{
 }
 .item__like{
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 25px;
+    right: 30px;
     font-size: 28px;
     color: #fff200;
     width: 50px;
@@ -528,7 +573,7 @@ a.userBlock__name{
     text-align: right;
     font-size: 30px;
     position: relative;
-    margin-top: -10px;
+    margin-top: 60px;
     z-index: 10;
 }
 .projects__all a,
@@ -536,17 +581,17 @@ a.userBlock__name{
     color: #9aca3c;
     text-decoration: none;
     transition: .5s;
-    padding-right: 120px;
+    padding-right: 110px;
     font-family: 'SFProDisplayLight', Arial, sans-serif;;
 }
 .projects__all a::before,
 .partners__link a::before{
     content: '';
     position: absolute;
-    right: 5px;
+    right: -5px;
     top: 53%;
     transform: translateY(-50%);
-    width: 65px;
+    width: 90px;
     height: 5px;
     background-color: #9aca3c;
     transition: .5s;
@@ -555,11 +600,11 @@ a.userBlock__name{
 .partners__link a::after{
     content: '';
     position: absolute;
-    right: 7px;
+    right: 0;
     top: 53%;
     transform: translateY(-50%) rotate(45deg);
-    width: 37px;
-    height: 37px;
+    width: 43px;
+    height: 43px;
     border-top: 5px solid #9aca3c;
     border-right: 5px solid #9aca3c;
     transition: .5s;
@@ -570,28 +615,26 @@ a.userBlock__name{
     text-decoration: underline;
 }
 .projects__all a:hover::before,
+.partners__link a:hover::before{
+    right: -25px;
+}
 .projects__all a:hover::after,
-.partners__link a:hover::before,
 .partners__link a:hover::after{
     right: -20px;
 }
 /*-----------------------tabs---------------------------*/
 .tabs{
     list-style: none;
-    margin: 0 0 50px;
+    margin: 0 0 70px;
     padding: 0 20px;
 }
 .tabs__item{
-    margin-right: 40px;
+    margin-right: 75px;
     display: inline-block;
     vertical-align: top;
 }
 .tabs__item:last-child{
     margin-right: 0;
-}
-.tabs__item.active .tabs__link,
-.tabs__link:hover{
-    color: #9aca3c;
 }
 .tabs__link{
     font-size: 24px;
@@ -600,7 +643,8 @@ a.userBlock__name{
     text-decoration: none;
     transition: .3s;
 }
-.tabs__item.active .tabs__link::after{
+.tabs__item.active .tabs__link::after,
+.tabs__item:hover .tabs__link::after{
     content: '';
     display: block;
     width: 100%;
@@ -631,17 +675,16 @@ a.userBlock__name{
 
 /*---------------------------------partners-----------------------*/
 .partners{
-    margin: 100px auto 50px;
+    margin: 90px auto 120px;
     padding: 50px 0;
-    max-width: 1700px;
+    max-width: 1670px;
 }
 .partners__title{
     font-size: 48px;
     line-height: 85px;
     color: #202020;
     margin-bottom: 50px;
-    font-family: 'SFProDisplayMedium', Arial, sans-serif;
-    padding: 0 35px;
+    font-family: 'SFProDisplayLight', Arial, sans-serif;
 }
 .slider__items{
     overflow: hidden;
@@ -679,8 +722,8 @@ a.userBlock__name{
 /*-------------------------------subscribe-----------------------*/
 .subscribe{
     text-align: center;
-    max-width: 1700px;
-    margin: 0 auto 350px;
+    max-width: 1670px;
+    margin: 0 auto 320px;
 }
 .subscribe__title{
     font-size: 48px;
@@ -691,14 +734,18 @@ a.userBlock__name{
     letter-spacing: .005em;
 }
 .subscribe label{
-    display: block;
-    transform: skew(-25deg);
+    transform: skew(-27deg);
     border: 3px solid #fff200;
     box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
-    width: 359px;
-    padding: 13px 25px 13px 30px;
+    width: 335px;
+    padding: 0 25px 0 30px;
     margin-right: 65px;
     transition: .5s;
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .subscribe input{
     width: 100%;
@@ -706,8 +753,8 @@ a.userBlock__name{
     color: #282828;
     font-family: 'SFProDisplayLightItalic', Arial, sans-serif;
     font-size: 24px;
-    line-height: 48px;
-    transform: skew(25deg);
+    line-height: 40px;
+    transform: skew(27deg);
     box-sizing: border-box;
 }
 .subscribe label:hover{
@@ -719,17 +766,18 @@ a.userBlock__name{
 .btn__wrap{
     background-color: #9aca3c;
     box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
-    width: 250px;
+    width: 215px;
     transform: skew(-25deg);
     transition: .5s;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70px;
+    box-sizing: border-box;
 }
 .subscribe button{
     border: none;
-    padding: 25px;
     font-size: 24px;
     color: #ffffff;
     font-family: 'SFProDisplayLight', Arial, sans-serif;
@@ -766,7 +814,7 @@ a.userBlock__name{
     clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
 }
 .footer__wrapper{
-    max-width: 1700px;
+    max-width: 1670px;
     margin: auto;
 }
 .footer__nav{
@@ -811,7 +859,7 @@ a.userBlock__name{
 .footerNav li > a{
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 60px;
     transition: .5s;
     display: block;
@@ -826,7 +874,7 @@ a.userBlock__name{
 }
 .footerNav__item span{
     color: #2a2a2a;
-    font-size: 16px;
+    font-size: 19px;
     display: block;
     margin: 30px 0 60px;
 }
@@ -883,10 +931,6 @@ a.userBlock__name{
 
 /*-----------------------media queries-------------------------------------*/
 @media (max-width: 1750px){
-    .header{
-        /*background-size: 80%;*/
-        /*background-size: 1000px 1000px;*/
-    }
     .header__wrapper{
         max-width: none;
         padding: 0 50px;
@@ -902,22 +946,31 @@ a.userBlock__name{
         margin: 0;
     }
     .header__links a{
-        padding: 10px 0 10px 50px;
+        padding: 15px 0 15px 40px;
         border-radius: 50px;
-        font-size: 20px;
-        width: 200px;
+        font-size: 22px;
+        width: 270px;
     }
     .header__links{
         margin-top: 50px;
     }
-    .header__links .add::before,
-    .header__links .add::after,
-    .header__links .toSupport::before{
-        width: 23px;
+    .header__links .add{
+        margin-right: 50px;
     }
-    .header__links .toSupport::after{
-        width: 10px;
-        height: 10px;
+    .header__links .add a::before,
+    .header__links .add a::after,
+    .header__links .toSupport a::before{
+        right: 25px;
+        width: 25px;
+    }
+    .header__links .toSupport a::after{
+        width: 15px;
+        height: 15px;
+        right: 25px;
+    }
+    .header__links .toSupport a:hover::before,
+    .header__links .toSupport a:hover::after{
+        right: 20px;
     }
     .navMain{
         max-width: none;
@@ -929,6 +982,9 @@ a.userBlock__name{
     }
     .navMain li{
         width: auto;
+    }
+    .navMain ul{
+        margin-right: 50px;
     }
     .userBlock{
         width: 190px;
@@ -965,12 +1021,6 @@ a.userBlock__name{
     }
     .item__img{
         max-height: 200px;
-    }
-    .item__info{
-        padding: 20px 15px;
-        font-size: 18px;
-        line-height: 24px;
-        color: #2a2a2a;
     }
     .item__category{
         bottom: 20px;
@@ -1062,8 +1112,14 @@ a.userBlock__name{
     }
 }
 @media (max-width: 1399px) {
+    .header__wrapper{
+        margin-top: 20px;
+    }
     .navMain__wrapper{
         width: 78%;
+    }
+    .navMain{
+        align-items: flex-end;
     }
     .userBlock{
         margin-right: 40px;
@@ -1075,9 +1131,9 @@ a.userBlock__name{
     .projects__items{
         padding: 0;
     }
-    .item__title{
-        font-size: 24px;
-        line-height: 28px;
+    .item__title,
+    .item__donate{
+        font-size: 20px;
     }
     .subscribe{
         margin-bottom: 200px;
@@ -1097,12 +1153,17 @@ a.userBlock__name{
     .header__wrapper{
         max-width: 1170px;
         margin-top: 20px;
+        padding: 0 30px;
+    }
+    .header__info{
+        width: 50%;
     }
     .header__info h2{
         margin-bottom: 20px;
     }
-    .header__img{
-        bottom: -20px;
+    .header__info p{
+        font-size: 20px;
+        line-height: 28px;
     }
     .header__links{
         justify-content: flex-start;
@@ -1114,7 +1175,7 @@ a.userBlock__name{
         margin-right: 20px;
     }
     .header__links a{
-        width: 120px;
+        width: 170px;
         font-size: 15px;
         padding-left: 20px;
         margin-right: 20px;
@@ -1122,11 +1183,14 @@ a.userBlock__name{
     .header__links .add a::before,
     .header__links .add a::after,
     .header__links .toSupport a::before{
-        right: -10px;
+        right: 0;
         width: 22px;
     }
+    .header__links .toSupport a{
+        padding-left: 20px;
+    }
     .header__links .toSupport a::after{
-        right: -10px;
+        right: 0;
         width: 13px;
         height: 13px;
     }
@@ -1135,12 +1199,12 @@ a.userBlock__name{
     .header__links .toSupport::before{
         width: 18px;
     }
-    .navMain{
-        max-width: none;
-        align-items: flex-end;
+    .header__links .toSupport a:hover::before,
+    .header__links .toSupport a:hover::after{
+        right: -5px;
     }
     .navMain a{
-        font-size: 16px;
+        font-size: 17px;
         line-height: 24px;
     }
     .navMain a.active::after,
@@ -1148,21 +1212,21 @@ a.userBlock__name{
         height: 4px;
     }
     .navMain ul{
-        margin-right: 0;
+        margin-right: 20px;
     }
     .userBlock{
-        width: 150px;
+        margin-right: 25px;
     }
     .userBlock__name::after{
         background-size: 60%;
         margin-top: 7px;
     }
     .userBlock__name::before{
-        right: -5px;
+        right: -12px;
     }
     .search{
-        width: 40px;
-        height: 25px;
+        width: 45px;
+        height: 30px;
     }
     .search-icon{
         width: 13px;
@@ -1177,7 +1241,7 @@ a.userBlock__name{
         right: -6px;
     }
     .search.open{
-        height: 25px;
+        height: 30px;
         width: 180px;
     }
     .open .search-icon::before{
@@ -1197,17 +1261,18 @@ a.userBlock__name{
         height: 80px;
         bottom: -79px;
     }
+    .projects__wrapper{
+        padding-top: 30px;
+    }
     .item{
         width: 48%;
         max-width: 440px;
     }
     .item__info{
         font-size: 15px;
-        line-height: 24px;
     }
     .item__title{
         font-size: 20px;
-        line-height: 28px;
     }
     .item__donate,
     .item__donate .item__in{
@@ -1295,9 +1360,19 @@ a.userBlock__name{
     }
     .navMain ul{
         width: 100%;
+        margin-right: 0;
     }
     .navMain__logo{
         margin-right: 100px;
+    }
+    .tabs{
+        margin-bottom: 40px;
+    }
+    .tabs__item{
+        margin-right: 20px;
+    }
+    .tabs__item:last-child{
+        margin-right: 0;
     }
     .footerNav p{
         font-size: 18px;
@@ -1334,10 +1409,32 @@ a.userBlock__name{
         top: 50px;
         right: 0;
     }
-
 }
 
 @media (max-width: 767px) {
+    .header__wrapper{
+        margin-top: 0;
+    }
+    .header__links{
+        flex-direction: column;
+    }
+    .header__links a{
+        font-size: 13px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .header__links .add{
+        margin: 0 0 20px;
+    }
+    .header__links .add::before,
+    .header__links .add::after{
+        right: 10px;
+    }
+    .header__links .add::before,
+    .header__links .add::after,
+    .header__links .toSupport::before{
+        width: 15px;
+    }
     .header__img{
         width: 90%;
     }
@@ -1388,7 +1485,7 @@ a.userBlock__name{
         right: 0;
     }
     .userBlock__name::before{
-        right: -25px;
+        right: -35px;
     }
     .navMain a{
         padding: 5px;
@@ -1400,28 +1497,9 @@ a.userBlock__name{
     .search.open{
         margin-top: 2px;
     }
-    .header__wrapper{
-        margin-top: 0;
-    }
-    .header__links{
-        flex-direction: column;
-    }
-    .header__links a{
-        width: 120px;
-        font-size: 13px;
-        padding-left: 20px;
-    }
-    .header__links .add{
-        margin-bottom: 20px;
-    }
-    .header__links .add::before,
-    .header__links .add::after{
-        right: 10px;
-    }
-    .header__links .add::before,
-    .header__links .add::after,
-    .header__links .toSupport::before{
-        width: 15px;
+    .item{
+        width: 100%;
+        margin: 0 auto 30px;
     }
     .partners__title{
         text-align: center;
@@ -1437,7 +1515,7 @@ a.userBlock__name{
         padding: 0 23px;
     }
     .projects__wrapper{
-        padding: 0 30px;
+        padding: 30px 30px 0;
     }
     .userBlock__name::after{
         right: -20px;
@@ -1464,8 +1542,16 @@ a.userBlock__name{
         width: 100%;
         margin-bottom: 30px;
     }
+    .header__info h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .header__info span{
+        font-size: 24px;
+    }
     .header__info p{
         margin-bottom: 30px;
+        font-size: 16px;
     }
     .header__img{
         width: 100%;
@@ -1475,11 +1561,7 @@ a.userBlock__name{
     }
     .navMain__wrapper{
         width: 100%;
-    }
-    .item{
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto 30px;
+        margin-top: 10px;
     }
     .navMain{
         flex-direction: column;
@@ -1521,31 +1603,30 @@ a.userBlock__name{
     .open .search-icon{
         width: 14px;
     }
-    .userBlock{
-        width: 120px;
-    }
     .navMain a{
         font-size: 15px;
         padding: 0;
     }
+    .user__wrapper{
+        align-items: baseline;
+    }
     .userBlock__name::after{
-        background-size: 40%;
-        margin-top: 11px;
+        margin-top: 8px;
+    }
+    .userBlock__name::before{
+        display: none;
     }
     .userBlock a{
         padding-right: 30px;
+        font-size: 20px;
     }
     .header__title{
         margin-top: 10px;
         font-size: 30px;
         line-height: 36px;
     }
-    .header__info p{
-        font-size: 20px;
-        line-height: 24px;
-    }
     .projects__wrapper{
-        padding: 0 20px;
+        padding: 20px 20px 0;
     }
     .projects__title{
         font-size: 30px;
