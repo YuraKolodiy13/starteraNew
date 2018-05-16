@@ -172,6 +172,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 .navMain__btn{
     width: 40px;
@@ -258,6 +260,7 @@ body{
     display: flex;
     align-items: center;
     padding-bottom: 6px;
+    margin-right: 80px;
 }
 .userBlock a{
     color: #2a2a2a;
@@ -266,16 +269,25 @@ a.userBlock__name{
     position: relative;
     padding-right: 55px;
 }
-/*.userBlock__name::after{*/
-/*content: '';*/
-/*position: absolute;*/
-/*right: -5px;*/
-/*top: 50%;*/
-/*transform: translateY(-50%);*/
-/*width: 40px;*/
-/*height: 40px;*/
-/*background: url("../img/user.png") no-repeat;*/
-/*}*/
+.userBlock__name::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: url("../img/user.png") no-repeat;
+}
+.userBlock__name::before{
+    content: '/';
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%) rotate(10deg);
+    color: #fff200;
+    font-size: 45px;
+}
 .user__wrapper{
     display: flex;
     justify-content: space-between;
@@ -288,7 +300,7 @@ a.userBlock__name{
     border-radius: 40px;
     position: relative;
     z-index: 10;
-    left: 20px;
+    left: 0;
     overflow: hidden;
     margin-top: 6px;
     transition: all .5s ease;
@@ -1050,6 +1062,16 @@ a.userBlock__name{
     }
 }
 @media (max-width: 1399px) {
+    .navMain__wrapper{
+        width: 78%;
+    }
+    .userBlock{
+        margin-right: 40px;
+    }
+    .userBlock__name::before{
+        right: -15px;
+        font-size: 30px;
+    }
     .projects__items{
         padding: 0;
     }
@@ -1115,6 +1137,7 @@ a.userBlock__name{
     }
     .navMain{
         max-width: none;
+        align-items: flex-end;
     }
     .navMain a{
         font-size: 16px;
@@ -1134,6 +1157,9 @@ a.userBlock__name{
         background-size: 60%;
         margin-top: 7px;
     }
+    .userBlock__name::before{
+        right: -5px;
+    }
     .search{
         width: 40px;
         height: 25px;
@@ -1151,7 +1177,7 @@ a.userBlock__name{
         right: -6px;
     }
     .search.open{
-        height: 30px;
+        height: 25px;
         width: 180px;
     }
     .open .search-icon::before{
@@ -1349,7 +1375,7 @@ a.userBlock__name{
     .navMain{
         top: 0;
         overflow-x: hidden;
-        padding: 15px 0 50px;
+        padding: 15px 0 70px;
         margin-bottom: 0;
     }
     .navMain ul.visible{
@@ -1358,14 +1384,21 @@ a.userBlock__name{
         padding: 0;
     }
     .user__wrapper{
-        top: 0;
+        top: -7px;
         right: 0;
+    }
+    .userBlock__name::before{
+        right: -25px;
     }
     .navMain a{
         padding: 5px;
     }
     .userBlock a{
         padding-right: 30px;
+    }
+    .search,
+    .search.open{
+        margin-top: 2px;
     }
     .header__wrapper{
         margin-top: 0;
@@ -1486,7 +1519,7 @@ a.userBlock__name{
         font-size: 14px;
     }
     .open .search-icon{
-        width: 18px;
+        width: 14px;
     }
     .userBlock{
         width: 120px;
