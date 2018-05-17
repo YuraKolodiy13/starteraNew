@@ -22,7 +22,7 @@ $(function () {
     $tabs = $('.tabs');
     $tabs.on('afterChange', function (event, slick, currentSlide, nextSlide) {
         $(this).parents('.projects__wrapper').find('.projects__items').addClass('hide');
-        $(this).find('.slick-current a').siblings().removeClass('active');
+        $(this).find('.slick-current').siblings().removeClass('active');
         var id = $(this).find('.slick-current a').attr('href');
         $(id).removeClass('hide');
         $(this).parent().find('.slick-current').addClass('active');
@@ -103,7 +103,8 @@ burger.addEventListener('click', function () {
 let input = document.querySelector('.subscribe label');
 document.body.addEventListener('click', function (e) {
     let target = e.target;
-    if(target.tagName == 'LABEL' || target.tagName == 'INPUT'){
+    if(target === input || target === input.querySelector('input')){
+        console.log(target);
         input.style.borderColor = 'gold';
     }else {
         input.style.borderColor = '';
