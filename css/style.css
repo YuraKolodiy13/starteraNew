@@ -864,11 +864,6 @@ a.userBlock__name:hover{
     -o-transition: .5s;
     transition: .5s;
 }
-.slider__item img:hover{
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
 .slider .slick-track{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -933,6 +928,14 @@ a.userBlock__name:hover{
 .subscribe label:hover{
     border-color: #9aca3c;
 }
+/*.subscribe label:focus{*/
+    /*border:  3px solid red;*/
+    /*outline: 3px solid black;*/
+/*}*/
+/*.subscribe input:focus{*/
+    /*border: 3px solid red;*/
+    /*outline: 3px solid black;*/
+/*}*/
 .subscribe input:focus{
     outline: none;
 }

@@ -98,3 +98,14 @@ burger.addEventListener('click', function () {
     this.classList.toggle('open');
     navList.classList.toggle('visible')
 });
+
+//focus
+let input = document.querySelector('.subscribe label');
+document.body.addEventListener('click', function (e) {
+    let target = e.target;
+    if(target.tagName == 'LABEL' || target.tagName == 'INPUT'){
+        input.style.borderColor = 'gold';
+    }else {
+        input.style.borderColor = '';
+    }
+});
