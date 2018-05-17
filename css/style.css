@@ -32,7 +32,11 @@ body{
 /* ----------------------------header  ------------------------       */
 .header{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     letter-spacing: .005em;
     padding-bottom: 150px;
@@ -40,9 +44,16 @@ body{
 .header__wrapper{
     max-width: 1670px;
     margin: 50px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -81,45 +92,74 @@ body{
     letter-spacing: .04em;
 }
 .header__links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 50px;
     position: relative;
     z-index: 10;
 }
 .header__links span{
+    -webkit-transform: skew(-27deg);
+    -ms-transform: skew(-27deg);
     transform: skew(-27deg);
     display: block;
+    -webkit-box-shadow: 0 11px 24px 0 rgba(35, 33, 41, 0.06);
     box-shadow: 0 11px 24px 0 rgba(35, 33, 41, 0.06);
 }
 .header__links .add{
-    background-color: #9aca3c;
+    background: -webkit-linear-gradient(315deg, #fff 0%, #fff 50%, #9aca3c 50%, #9aca3c 100%) right center;
+    background: -o-linear-gradient(315deg, #fff 0%, #fff 50%, #9aca3c 50%, #9aca3c 100%) right center;
+    background: linear-gradient(135deg, #fff 0%, #fff 50%, #9aca3c 50%, #9aca3c 100%) right center;
+    background-size: 226% auto;
     margin-right: 80px;
-    transition: 1s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .header__links .toSupport{
-    transition: 1s;
+    background: -webkit-linear-gradient(315deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
+    background: -o-linear-gradient(315deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
+    background: linear-gradient(135deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
+    background-size: 226% auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
 }
-.header__links .toSupport:hover{
-    background-color: #9aca3c;
-}
+.header__links .toSupport:hover,
 .header__links .add:hover{
-    background-color: #fff;
+    background-position: left center;
 }
 .header__links a{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-decoration: none;
     padding: 17px 0 17px 35px;
     font-family: 'SFProDisplayLight', Arial, sans-serif;
     font-size: 27px;
     position: relative;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     letter-spacing: .05em;
     width: 320px;
+    -webkit-transform: skew(27deg);
+    -ms-transform: skew(27deg);
     transform: skew(27deg);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .header__links .add a{
@@ -141,13 +181,19 @@ body{
     position: absolute;
     right: 35px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 33px;
     height: 2px;
     background-color: #fff;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .header__links .add a::after{
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    -ms-transform: translateY(-50%) rotate(90deg);
     transform: translateY(-50%) rotate(90deg);
 }
 .header__links .toSupport a::before{
@@ -155,10 +201,14 @@ body{
     position: absolute;
     right: 45px;
     top: 56%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 34px;
     height: 2px;
     background-color: #9aca3c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .header__links .toSupport a::after{
@@ -166,19 +216,28 @@ body{
     position: absolute;
     right: 46px;
     top: 57%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
     width: 17px;
     height: 17px;
     border-top: 2px solid #9aca3c;
     border-right: 2px solid #9aca3c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .header__links .add a:hover::before{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     background-color: #9aca3c;
 }
 .header__links .add a:hover::after{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     background-color: #9aca3c;
 }
@@ -194,7 +253,11 @@ body{
 /*-----------------------------------nav--------------------------*/
 .navMain__wrapper{
     width: 72%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
     margin-top: -15px;
@@ -203,8 +266,14 @@ body{
     width: 100%;
     max-width: 1670px;
     margin: 0 auto 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     z-index: 10;
@@ -240,6 +309,8 @@ body{
     top: -8px;
     left: 0;
     width: 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .navMain__btn span::after{
@@ -248,8 +319,14 @@ body{
 .navMain ul{
     padding: 0;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 63%;
     margin: 0 20px 0 0;
@@ -283,6 +360,8 @@ body{
     height: 6px;
     background-color: #fff200;
     display: block;
+    -webkit-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
     transform: skew(-45deg);
 }
 .navMain__logo{
@@ -294,7 +373,11 @@ body{
     letter-spacing: .005em;
 }
 .userBlock{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-bottom: 6px;
     margin-right: 80px;
@@ -305,6 +388,8 @@ body{
 a.userBlock__name{
     position: relative;
     padding-right: 55px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 a.userBlock__name:hover{
@@ -315,6 +400,8 @@ a.userBlock__name:hover{
     position: absolute;
     right: 0;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
@@ -325,12 +412,18 @@ a.userBlock__name:hover{
     position: absolute;
     right: -45px;
     top: 50%;
+    -webkit-transform: translateY(-50%) rotate(10deg);
+    -ms-transform: translateY(-50%) rotate(10deg);
     transform: translateY(-50%) rotate(10deg);
     color: #fff200;
     font-size: 45px;
 }
 .user__wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -344,7 +437,10 @@ a.userBlock__name:hover{
     left: 0;
     overflow: hidden;
     margin-top: 6px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
     transition: all .5s ease;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .search:hover,
@@ -363,6 +459,7 @@ a.userBlock__name:hover{
     position: absolute;
 }
 .search-box {
+    -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
     background: transparent;
@@ -390,6 +487,8 @@ a.userBlock__name:hover{
     border: 2px solid #2a2a2a;
     display: block;
     position: relative;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
     transition: all .5s ease;
 }
 .search:hover .search-icon::before,
@@ -406,13 +505,19 @@ a.userBlock__name:hover{
     top: 9px;
     display: block;
     background-color: #2a2a2a;
+    -webkit-transform: rotate(-56deg);
+    -ms-transform: rotate(-56deg);
     transform: rotate(-56deg);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
     transition: all .5s ease;
 }
 .open .search-icon{
     height: 2px;
     border: none;
     background-color: #2a2a2a;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     margin-top: 10px;
 }
@@ -420,6 +525,8 @@ a.userBlock__name:hover{
     height: 18px;
     right: 8px;
     top: -8px;
+    -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
 }
 .open {
@@ -429,6 +536,8 @@ a.userBlock__name:hover{
     border-radius: 60px;
 }
 .open:before {
+    -webkit-transform: rotate(52deg);
+    -ms-transform: rotate(52deg);
     transform: rotate(52deg);
     right: 22px;
     top: 23px;
@@ -449,6 +558,7 @@ a.userBlock__name:hover{
     width: 100%;
     height: 160px;
     background-color: #f9f9f9;
+    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
     clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
 }
 .projects::after{
@@ -459,6 +569,7 @@ a.userBlock__name:hover{
     width: 100%;
     height: 160px;
     background-color: #f9f9f9;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
 .projects__wrapper{
@@ -466,8 +577,13 @@ a.userBlock__name:hover{
     margin: auto;
 }
 .projects__items{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0 20px;
 }
@@ -478,12 +594,16 @@ a.userBlock__name:hover{
 }
 .item{
     width: 487px;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(41, 41, 41, 0.14);
     box-shadow: 0 4px 6px 0 rgba(41, 41, 41, 0.14);
     position: relative;
     margin-bottom: 75px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
 }
 .item:hover{
+    -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .5);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .5);
 }
 .item__img{
@@ -514,6 +634,8 @@ a.userBlock__name:hover{
     font-size: 24px;
     line-height: 65px;
     color: #1f1f1f;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .item__percent{
@@ -555,13 +677,22 @@ a.userBlock__name:hover{
     width: 50px;
     height: 50px;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-shadow: 0 12px 29px 0 rgba(41, 41, 41, 0.49);
     box-shadow: 0 12px 29px 0 rgba(41, 41, 41, 0.49);
     cursor: pointer;
 }
 .item__like i{
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     margin-top: 5px;
 }
@@ -580,6 +711,8 @@ a.userBlock__name:hover{
 .partners__link a{
     color: #9aca3c;
     text-decoration: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     padding-right: 110px;
     font-family: 'SFProDisplayLight', Arial, sans-serif;;
@@ -590,10 +723,14 @@ a.userBlock__name:hover{
     position: absolute;
     right: -5px;
     top: 53%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 90px;
     height: 5px;
     background-color: #9aca3c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .projects__all a::after,
@@ -602,12 +739,17 @@ a.userBlock__name:hover{
     position: absolute;
     right: 0;
     top: 53%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
     width: 43px;
     height: 43px;
     border-top: 5px solid #9aca3c;
     border-right: 5px solid #9aca3c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .projects__all a:hover,
@@ -641,6 +783,8 @@ a.userBlock__name:hover{
     line-height: 51px;
     color: #2a2a2a;
     text-decoration: none;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 .tabs__item.active .tabs__link::after,
@@ -650,6 +794,8 @@ a.userBlock__name:hover{
     width: 100%;
     height: 5px;
     background-color: #fff200;
+    -webkit-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
     transform: skew(-45deg);
 }
 
@@ -665,8 +811,13 @@ a.userBlock__name:hover{
 }
 .projects__items{
     opacity: 1;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 .projects__items.hide{
@@ -709,13 +860,20 @@ a.userBlock__name:hover{
 .slider__item img{
     width: 114px;
     height: auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .slider__item img:hover{
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
 .slider .slick-track{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -734,17 +892,29 @@ a.userBlock__name:hover{
     letter-spacing: .005em;
 }
 .subscribe label{
+    -webkit-transform: skew(-27deg);
+    -ms-transform: skew(-27deg);
     transform: skew(-27deg);
     border: 3px solid #fff200;
+    -webkit-box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
     box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
     width: 335px;
     padding: 0 25px 0 30px;
     margin-right: 65px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .subscribe input{
@@ -754,7 +924,10 @@ a.userBlock__name:hover{
     font-family: 'SFProDisplayLightItalic', Arial, sans-serif;
     font-size: 24px;
     line-height: 40px;
+    -webkit-transform: skew(27deg);
+    -ms-transform: skew(27deg);
     transform: skew(27deg);
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 .subscribe label:hover{
@@ -765,16 +938,29 @@ a.userBlock__name:hover{
 }
 .btn__wrap{
     background-color: #9aca3c;
+    -webkit-box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
     box-shadow: 0 12px 38px 0 rgba(36, 34, 43, 0.24);
     width: 215px;
+    -webkit-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
     transform: skew(-25deg);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 70px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    border: solid 3px #9aca3c;
 }
 .subscribe button{
     border: none;
@@ -783,16 +969,27 @@ a.userBlock__name:hover{
     font-family: 'SFProDisplayLight', Arial, sans-serif;
     cursor: pointer;
     background-color: #9aca3c;
+    -webkit-transform: skew(25deg);
+    -ms-transform: skew(25deg);
     transform: skew(25deg);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .subscribe .btn__wrap:hover,
 .subscribe .btn__wrap:hover button{
-    background-color: #fff200;
+    background-color: #fff;
     color: #9aca3c;
 }
+.subscribe .btn__wrap button:focus{
+    outline: none;
+}
 .form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -811,6 +1008,7 @@ a.userBlock__name:hover{
     width: 100%;
     height: 160px;
     background-color: #9aca3c;
+    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
     clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
 }
 .footer__wrapper{
@@ -818,7 +1016,11 @@ a.userBlock__name:hover{
     margin: auto;
 }
 .footer__nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     color: #ffffff;
     max-width: 1150px;
@@ -846,6 +1048,8 @@ a.userBlock__name:hover{
     position: absolute;
     left: -48px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 .footerNav__item{
@@ -861,12 +1065,18 @@ a.userBlock__name:hover{
     text-decoration: none;
     font-size: 19px;
     line-height: 60px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     display: block;
 }
 .footerNav li > a:hover{
     color: #00f9cd;
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
     transform: translateX(10px);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .footerNav a[href ^='mailto']{
@@ -879,7 +1089,11 @@ a.userBlock__name:hover{
     margin: 30px 0 60px;
 }
 .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: -10px 0 50px;
     position: absolute;
@@ -889,12 +1103,20 @@ a.userBlock__name:hover{
     border-radius: 50%;
     width: 67px;
     height: 67px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 30px;
     text-decoration: none;
     color: #23284c;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     margin-right: 30px;
 }
@@ -902,6 +1124,8 @@ a.userBlock__name:hover{
     margin-right: 0;
 }
 .social__btn i{
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .social__btn:hover{
@@ -912,7 +1136,11 @@ a.userBlock__name:hover{
 }
 
 .footer__info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     color: #ffffff;
     font-size: 15px;
@@ -1071,6 +1299,7 @@ a.userBlock__name:hover{
         max-width: none;
     }
     .footerNav{
+        -ms-flex-pack: distribute;
         justify-content: space-around;
     }
     .footerNav p{
@@ -1119,6 +1348,8 @@ a.userBlock__name:hover{
         width: 78%;
     }
     .navMain{
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
     }
     .userBlock{
@@ -1166,6 +1397,8 @@ a.userBlock__name:hover{
         line-height: 28px;
     }
     .header__links{
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         position: absolute;
         z-index: 10;
@@ -1416,11 +1649,15 @@ a.userBlock__name:hover{
         margin-top: 0;
     }
     .header__links{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
     .header__links a{
         font-size: 13px;
         padding-left: 20px;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
     .header__links .add{
@@ -1449,6 +1686,8 @@ a.userBlock__name:hover{
     }
     .navMain__btn{
         display: block;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
         transition: .5s;
     }
     .navMain__btn.open span{
@@ -1457,16 +1696,24 @@ a.userBlock__name:hover{
     .navMain__btn.open span::before{
         left: 50%;
         top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
     .navMain__btn.open span::after{
         left: 50%;
         top: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
     .navMain ul{
+        -webkit-transform: translate(100%, 65px);
+        -ms-transform: translate(100%, 65px);
         transform: translate(100%, 65px);
         opacity: 0;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
         transition: .5s;
     }
     .navMain{
@@ -1476,6 +1723,8 @@ a.userBlock__name:hover{
         margin-bottom: 0;
     }
     .navMain ul.visible{
+        -webkit-transform: translate(0, 65px);
+        -ms-transform: translate(0, 65px);
         transform: translate(0, 65px);
         opacity: 1;
         padding: 0;
@@ -1509,6 +1758,7 @@ a.userBlock__name:hover{
         text-align: center;
     }
     .footer__nav{
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
     .header__wrapper{
@@ -1524,9 +1774,64 @@ a.userBlock__name:hover{
     .btn__wrap{
         width: 220px;
     }
+    .subscribe input{
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
     .tabs__link{
         font-size: 16px;
         line-height: 24px;
+    }
+    .tabs.slick-slider{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .tabs .slick-arrow{
+        border: none;
+        font-size: 0;
+        background: none;
+        width: 10px;
+        height: 13px;
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 5px;
+    }
+    .tabs .slick-arrow:focus{
+        outline: none;
+    }
+    .tabs .slick-next{
+        width: 10px;
+        height: 15px;
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top: 8px;
+    }
+    .tabs__item.slick-slide{
+        height: 60px;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 }
 
@@ -1564,6 +1869,9 @@ a.userBlock__name:hover{
         margin-top: 10px;
     }
     .navMain{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-bottom: 70px;
     }
@@ -1586,6 +1894,7 @@ a.userBlock__name:hover{
         top: 0;
     }
     .userBlock{
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
     .search-icon:before{
@@ -1608,6 +1917,8 @@ a.userBlock__name:hover{
         padding: 0;
     }
     .user__wrapper{
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
         align-items: baseline;
     }
     .userBlock__name::after{
@@ -1634,31 +1945,38 @@ a.userBlock__name:hover{
         text-align: center;
         margin-bottom: 20px;
     }
-    .projects__all{
-        text-align: center;
+    .projects__all,
+    .partners__link{
+        margin-top: 0;
     }
-    .projects__all a{
-        padding: 0;
-        position: relative;
+    .projects__all a,
+    .partners__link a{
         font-size: 20px;
         line-height: 24px;
     }
     .projects__all a::after,
-    .projects__all a::before{
-        right: -25px;
+    .projects__all a::before,
+    .partners__link a::before,
+    .partners__link a::after{
+        margin-top: 4px;
+        right: 10px;
     }
-    .projects__all a::before{
+    .projects__all a::before,
+    .partners__link a::before{
         width: 20px;
         height: 1px;
     }
-    .projects__all a::after{
+    .projects__all a::after,
+    .partners__link a::after{
         width: 8px;
         height: 8px;
         border-width: 1px;
     }
     .projects__all a:hover::before,
-    .projects__all a:hover::after{
-        right: -35px;
+    .projects__all a:hover::after,
+    .partners__link a:hover::before,
+    .partners__link a:hover::after{
+        right: 0;
     }
     .projects::after{
         height: 60px;
@@ -1669,6 +1987,7 @@ a.userBlock__name:hover{
     }
     .partners{
         margin-bottom: 0;
+        padding: 50px 20px;
     }
     .partners__title{
         font-size: 30px;
@@ -1687,15 +2006,25 @@ a.userBlock__name:hover{
         margin: 0 0 20px;
     }
     .form{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
     .footerNav__item{
         width: 100%;
     }
     .social{
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-bottom: 10px;
     }
@@ -1716,5 +2045,10 @@ a.userBlock__name:hover{
     .projects::after{
         height: 40px;
         bottom: -39px;
+    }
+}
+@media (max-width: 424px) {
+    .social__btn {
+        margin: 5px;
     }
 }
