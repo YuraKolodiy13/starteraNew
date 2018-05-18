@@ -1,3 +1,18 @@
+/*
+Theme Name: Startera
+Theme URI:
+Author: vede_dev
+Author URI: vede.in.ua
+Description: Startera custom theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: startera
+
+*/
+
+@import "news-style.css";
+
 @font-face {
     font-family: 'SFProDisplayThin';
     src: url('../fonts/SF-Pro-Display-Thin.otf');
@@ -130,7 +145,7 @@ body{
     background: -webkit-linear-gradient(315deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
     background: -o-linear-gradient(315deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
     background: linear-gradient(135deg, #9aca3c 0%, #9aca3c 50%, #fff 50%, #fff 100%) right center;
-    background-size: 226% auto;
+    background-size: 230% auto;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
@@ -614,6 +629,10 @@ a.userBlock__name:hover{
 .item__img img{
     max-width: 100%;
     height: auto;
+    transition: .5s;
+}
+.item__img img:hover{
+    transform: scale(1.05);
 }
 .item__info{
     padding: 10px 23px 20px 25px;
@@ -622,8 +641,14 @@ a.userBlock__name:hover{
     color: #2a2a2a;
 }
 .item__title{
+    text-decoration: none;
     font-size: 24px;
     line-height: 51px;
+    color: inherit;
+    transition: .3s;
+}
+.item__title:hover{
+    color: #9aca3c;
 }
 .item__author{
     font-size: 18px;
@@ -929,14 +954,6 @@ a.userBlock__name:hover{
 .subscribe label:hover{
     border-color: #9aca3c;
 }
-/*.subscribe label:focus{*/
-    /*border:  3px solid red;*/
-    /*outline: 3px solid black;*/
-/*}*/
-/*.subscribe input:focus{*/
-    /*border: 3px solid red;*/
-    /*outline: 3px solid black;*/
-/*}*/
 .subscribe input:focus{
     outline: none;
 }
@@ -1101,6 +1118,7 @@ a.userBlock__name:hover{
     justify-content: space-between;
     margin: -10px 0 50px;
     position: absolute;
+    visibility: hidden;
 }
 .social__btn{
     border: 2px solid #fff;
@@ -1158,6 +1176,8 @@ a.userBlock__name:hover{
 .hr{
     opacity: .55;
     margin: 0 -35px;
+    border: none;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -1207,6 +1227,9 @@ a.userBlock__name:hover{
     .navMain{
         max-width: none;
         margin-bottom: 50px;
+    }
+    .navMain__wrapper{
+        margin-top: 0;
     }
     .navMain a{
         font-size: 20px;
@@ -1281,13 +1304,6 @@ a.userBlock__name:hover{
         font-size: 38px;
         line-height: 45px;
     }
-    .subscribe input{
-        width: 220px;
-        padding: 10px 25px 10px 30px;
-        font-size: 20px;
-        line-height: 30px;
-        margin-right: 10px;
-    }
     .subscribe button{
         width: 160px;
         padding: 15px;
@@ -1349,12 +1365,7 @@ a.userBlock__name:hover{
         margin-top: 20px;
     }
     .navMain__wrapper{
-        width: 78%;
-    }
-    .navMain{
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
+        width: 76%;
     }
     .userBlock{
         margin-right: 40px;
@@ -1382,6 +1393,9 @@ a.userBlock__name:hover{
     .subscribe label{
         width: 265px;
         padding: 5px 15px 5px 15px;
+    }
+    .subscribe input{
+        padding-left: 10px;
     }
 }
 @media (max-width: 1199px){
@@ -1712,9 +1726,6 @@ a.userBlock__name:hover{
         transform: rotate(-45deg);
     }
     .navMain ul{
-        /*-webkit-transform: translate(100%, 65px);*/
-        /*-ms-transform: translate(100%, 65px);*/
-        /*transform: translate(100%, 65px);*/
         opacity: 0;
         -webkit-transition: .5s;
         -o-transition: .5s;
@@ -1745,7 +1756,7 @@ a.userBlock__name:hover{
         position: static;
     }
     .navMain__btn{
-        top: 25px;
+        top: 27px;
     }
     .navMain li{
         margin-bottom: 15px;
@@ -1753,7 +1764,6 @@ a.userBlock__name:hover{
     .navMain ul a{
         padding-bottom: 0;
         font-size: 20px;
-
     }
     .navMain ul a::after{
         content: '';
@@ -1800,6 +1810,9 @@ a.userBlock__name:hover{
     .item{
         width: 100%;
         margin: 0 auto 30px;
+    }
+    .tabs__item{
+        margin-right: 0;
     }
     .partners__title{
         text-align: center;

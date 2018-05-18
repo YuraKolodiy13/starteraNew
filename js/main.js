@@ -78,7 +78,9 @@ $(function () {
 let item = document.querySelectorAll('.item');
 
 [...item].forEach(item => {
-    item.querySelector('.item__bar').style.width = item.querySelector('.item__percent').innerHTML;
+    if(item.querySelector('.item__bar')){
+        item.querySelector('.item__bar').style.width = item.querySelector('.item__percent').innerHTML;
+    }
 });
 
 //search
@@ -103,10 +105,12 @@ burger.addEventListener('click', function () {
 let input = document.querySelector('.subscribe label');
 document.body.addEventListener('click', function (e) {
     let target = e.target;
-    if(target === input || target === input.querySelector('input')){
-        console.log(target);
-        input.style.borderColor = 'gold';
-    }else {
-        input.style.borderColor = '';
+    if(input){
+        if(target === input || target === input.querySelector('input')){
+            console.log(target);
+            input.style.borderColor = 'gold';
+        }else {
+            input.style.borderColor = '';
+        }
     }
 });
