@@ -1,5 +1,8 @@
+.projectPage .header{
+    padding-bottom: 50px;
+}
 .projectActive{
-    max-width: 1638px;
+    max-width: 1670px;
     margin: 0 auto 200px;
 }
 .projectActive__wrapper{
@@ -7,7 +10,7 @@
     justify-content: space-between;
 }
 .projectActive__video{
-    width: 55%;
+    width: 60%;
     position: relative;
     cursor: pointer;
     transition: .5s;
@@ -44,16 +47,91 @@
     border-left-color: red;
 }
 .projectActive__info{
-    width: 40%;
+    width: 35%;
     position: relative;
+    margin-top: 100px;
 }
 .projectActive__title{
-    font-size: 40px;
+    font-size: 36px;
     line-height: 50px;
+    font-family: SFProDisplayMedium, Arial, sans-serif;
+    letter-spacing: .025em;
 }
 .projectActive__author{
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 24px;
+    line-height: 36px;
     text-decoration: underline;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+.projectPage .item__donate{
+    font-size: 58px;
+    line-height: 82px;
+    font-family: SFProDisplayMedium, Arial, sans-serif;
+    color: #2a2a2a;
+}
+.projectPage .item__currency{
+    font-size: 39px;
+    font-family: SFProDisplayRegular, Arial, sans-serif;
+    line-height: 90px;
+}
+.projectPage .item__progress{
+    width: 90%;
+    height: 5px;
+}
+.projectPage .item__bar{
+    height: 5px;
+}
+.projectPage .item__to,
+.projectPage .item__percent{
+    font-size: 24px;
+    line-height: 51px;
+    color: #b6b6b6;
+    font-family: SFProDisplayLight, Arial, sans-serif;
+}
+.projectPage .header__links{
+    margin-top: 100px;
+}
+.projectPage .header__links .toSupport{
+    background: linear-gradient(135deg, #fff 0%, #fff 50%, #9aca3c 50%, #9aca3c 100%) right center;;
+    background-size: 226% auto;
+    margin-right: 50px;
+}
+.projectPage .header__links .toSupport a,
+.projectPage .header__links .toSupport a::after{
+    border-color: #fff;
+    color: #ffffff;
+}
+.projectPage .header__links .toSupport a:hover,
+.projectPage .header__links .toSupport a:hover::after{
+    color: #9aca3c;
+    border-color: #9aca3c;
+}
+.projectPage .header__links .toSupport a::before{
+    background-color: #ffffff;
+}
+.projectPage .header__links .toSupport a:hover::before{
+    background-color: #9aca3c;
+}
+.projectPage .item__like{
+    position: static;
+    height: auto;
+    width: 100px;
+}
+.projectPage .item__like a{
+    color: #fff200;
+    width: auto;
+}
+.projectPage .item__like:hover i{
+    transform: scale(1.3);
+}
+.projectPage .item__category{
+    position: static;
+    font-size: 20px;
+    line-height: 51px;
+}
+.projectActiveDescription{
+    margin-bottom: 200px;
+}
+.projectActiveDescription__wrapper{
+    width: 60%;
 }

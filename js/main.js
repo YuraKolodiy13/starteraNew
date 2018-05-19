@@ -1,7 +1,16 @@
 //tabs and partners slider
 let items = document.querySelectorAll('.projects__items');
-[...items].forEach((item) => item.classList.add('hide'));
-items[0].classList.remove('hide');
+if(items.length !== 0){
+    [...items].forEach((item) => {
+        item.classList.add('hide');
+        if(item.children.length === 2 && document.body.clientWidth > 1199){
+            item.style.justifyContent = 'flex-start';
+            item.children[0].style.marginRight = '5%';
+        }
+    });
+    items[0].classList.remove('hide');
+}
+
 
 let tabs = document.querySelectorAll('.tabs__link');
 for (let i = 0; i < tabs.length; i++){
@@ -82,6 +91,9 @@ let item = document.querySelectorAll('.item');
         item.querySelector('.item__bar').style.width = item.querySelector('.item__percent').innerHTML;
     }
 });
+if(document.querySelectorAll('.item__bar').length === 1){
+    document.querySelector('.item__bar').style.width = document.querySelector('.item__percent').innerHTML;
+}
 
 //search
 let search = document.querySelector('.search-button');

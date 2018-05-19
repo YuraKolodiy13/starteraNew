@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
-<body class="innerPage">
+<body class="projectPage">
 
 <header class="header">
     <div class="header__wrapper">
@@ -53,7 +53,7 @@
                 <img src="img/item3.jpg" alt="">
             </div>
             <div class="projectActive__info">
-                <div class="item__donate">120 тис. грн</div>
+                <div class="item__donate">120<span class="item__currency"> тис. грн</span></div>
                 <div class="item__progress">
                     <div class="item__bar"></div>
                 </div>
@@ -61,12 +61,33 @@
                 <div class="item__percent">57%</div>
                 <div class="header__links">
                     <span class="toSupport"><a href="">Підтримати</a></span>
-                    <span class="add"><a href="">Додати проект</a></span>
+                    <span class="item__like"><a href=""><i class="fas fa-heart"></i></a></span>
                 </div>
                 <div class="item__category"><a href="">Технології</a></div>
             </div>
         </div>
     </div>
+    <div class="projectActiveDescription">
+        <div class="projectActiveDescription__wrapper">
+            <ul class="projects__tabs tabs">
+                <li class="tabs__item active">
+                    <a href="#tab_1" class="tabs__link">Кампанія</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#tab_2" class="tabs__link">Питання</a>
+                </li>
+                <li class="tabs__item">
+                    <a href="#tab_3" class="tabs__link">Новини</a>
+                </li>
+            </ul>
+            <div class="boxTabContent">
+                <div class="projectActiveDescription__items" id="tab_1">
+                    <p>At tellus at urna condimentum mattis pellentesque id nibh. Placerat duis ultricies lacus sed. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Sed cras ornare arcu dui vivamus arcu felis bibendum. Sit amet venenatis urna cursus eget. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Cursus vitae congue mauris rhoncus aenean. Viverra vitae congue eu consequat ac felis donec et odio. Diam vel quam elementum pulvinar. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Diam vel quam elementum pulvinar. Imperdiet sed euismod nisi porta lorem mollis aliquam ut. Blandit aliquam etiam erat velit  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <footer class="footer">
