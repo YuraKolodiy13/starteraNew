@@ -13,8 +13,10 @@ if(items.length !== 0){
 
 
 let tabs = document.querySelectorAll('.tabs__link');
-for (let i = 0; i < tabs.length; i++){
-    tabs[i].innerHTML += ' (' + items[i].children.length + ')';
+if(items.length > 0){
+    for (let i = 0; i < tabs.length; i++){
+        tabs[i].innerHTML += ' (' + items[i].children.length + ')';
+    }
 }
 
 
@@ -126,3 +128,13 @@ document.body.addEventListener('click', function (e) {
         }
     }
 });
+
+//donate btn
+let donateItem = document.querySelectorAll('.donate__item');
+if(donateItem){
+    [...donateItem].forEach(item => {
+        if(item.querySelector('.donate__title span').innerHTML >= 500){
+            item.querySelector('.donate__btn').style.borderBottomColor = '#fff200';
+        }
+    })
+}
