@@ -1,16 +1,13 @@
 //tabs and partners slider
 let items = document.querySelectorAll('.projects__items');
-if(items.length !== 0){
-    [...items].forEach((item) => {
-        item.classList.add('hide');
-        if(item.children.length === 2 && document.body.clientWidth > 1199){
-            item.style.justifyContent = 'flex-start';
-            item.children[0].style.marginRight = '5%';
-        }
-    });
-    items[0].classList.remove('hide');
-}
-
+[...items].forEach((item) => {
+    item.classList.add('hide');
+    if(item.children.length === 2 && document.body.clientWidth > 1199){
+        item.style.justifyContent = 'flex-start';
+        item.children[0].style.marginRight = '5%';
+    }
+});
+items[0].classList.remove('hide');
 
 let tabs = document.querySelectorAll('.tabs__link');
 if(items.length > 0){
@@ -89,13 +86,9 @@ $(function () {
 let item = document.querySelectorAll('.item');
 
 [...item].forEach(item => {
-    if(item.querySelector('.item__bar')){
-        item.querySelector('.item__bar').style.width = item.querySelector('.item__percent').innerHTML;
-    }
+    item.querySelector('.item__bar').style.width = item.querySelector('.item__percent').innerHTML;
 });
-if(document.querySelectorAll('.item__bar').length === 1){
-    document.querySelector('.item__bar').style.width = document.querySelector('.item__percent').innerHTML;
-}
+document.querySelector('.item__bar').style.width = document.querySelector('.item__percent').innerHTML;
 
 //search
 let search = document.querySelector('.search-button');
@@ -119,22 +112,10 @@ burger.addEventListener('click', function () {
 let input = document.querySelector('.subscribe label');
 document.body.addEventListener('click', function (e) {
     let target = e.target;
-    if(input){
-        if(target === input || target === input.querySelector('input')){
-            console.log(target);
-            input.style.borderColor = 'gold';
-        }else {
-            input.style.borderColor = '';
-        }
+    if(target === input || target === input.querySelector('input')){
+        console.log(target);
+        input.style.borderColor = 'gold';
+    }else {
+        input.style.borderColor = '';
     }
 });
-
-//donate btn
-let donateItem = document.querySelectorAll('.donate__item');
-if(donateItem){
-    [...donateItem].forEach(item => {
-        if(item.querySelector('.donate__title span').innerHTML >= 500){
-            item.querySelector('.donate__btn').style.borderBottomColor = '#fff200';
-        }
-    })
-}

@@ -1,5 +1,5 @@
 .projectPage .header{
-    padding-bottom: 50px;
+    padding-bottom: 0;
 }
 .projectActive{
     max-width: 1670px;
@@ -161,12 +161,80 @@
     max-width: 1670px;
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 auto 100px;
+    padding: 0 35px;
+    box-sizing: border-box;
 }
 .description {
     margin-top: -90px;
-    width: 60%;
+    width: 59%;
 }
+.description__text{
+    font-size: 23px;
+    line-height: 41px;
+    font-family: 'Myriad Pro', Arial, sans-serif;
+    color: #424242;
+    margin-bottom: 30px;
+}
+.description__slider{
+    margin-bottom: 100px;
+    position: relative;
+}
+.description__slider img{
+    margin: 10px auto 20px;
+    box-shadow: 0 0 15px #000;
+}
+.projectPage .slick-dots{
+    margin-top: 0;
+}
+.projectPage .slick-dots li{
+    margin-right: 30px;
+}
+.projectPage .slick-dots li button{
+    border: 2px solid #898989;
+    border-radius: 0;
+    transform: skew(-30deg);
+    width: 12px;
+    height: 13px;
+    padding: 0;
+}
+.projectPage .slick-dots li.slick-active button{
+    background-color: #9aca3c;
+    border-color: #9aca3c;
+}
+.projectPage .slick-arrow{
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+.projectPage .slick-arrow:visited{
+
+}
+.projectPage .slick-arrow:focus{
+    outline: none;
+}
+.projectPage .slick-prev{
+    left: 40px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.projectPage .slick-next{
+    right: 40px;
+    transform: translateY(-50%) rotate(-135deg);
+}
+.projectPage .slick-prev:hover{
+    transform: translateY(-50%) rotate(45deg) scale(1.2);
+}
+.projectPage .slick-next:hover{
+    transform: translateY(-50%) rotate(-135deg) scale(1.2);
+}
+
 .projectPage .tabs {
     position: relative;
     display: flex;
@@ -209,15 +277,15 @@
 }
 .donate__btn {
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     border-bottom-color: rgb(154, 202, 60);
     border-left-color: transparent;
-    border-width: 0px 0px 80px 90px;
+    border-width: 0 0 80px 90px;
     border-style: solid solid;
     border-image: initial;
-    border-top: 0px;
-    border-right: 0px;
+    border-top: 0;
+    border-right: 0;
 }
 a.donate__btn::before {
     content: "";
@@ -252,4 +320,37 @@ a.donate__btn::after {
 .donate__support {
     color: rgb(182, 182, 182);
     margin-top: 15px;
+}
+
+.projectSocial .social{
+    visibility: visible;
+    position: static;
+    width: 20%;
+    margin: auto;
+}
+.projectSocial .social__btn{
+    border-color: #9aca3c;
+    color: #000000;
+}
+.projectSocial .social__btn:hover{
+    color: #9aca3c;
+    border-color: #000;
+}
+.projectSocial{
+    text-align: center;
+    padding: 10px 0;
+}
+.projectSocial p{
+    font-size: 24px;
+    line-height: 48px;
+}
+.recommendation{
+    max-width: 1670px;
+    margin: 0 auto 200px;
+}
+.recommendation__title{
+    font-size: 36px;
+    line-height: 42px;
+    font-family: SFProDisplayMedium, Arial, sans-serif;
+    margin-bottom: 50px;
 }

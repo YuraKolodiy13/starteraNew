@@ -1137,23 +1137,18 @@ a.userBlock__name:hover{
     font-size: 30px;
     text-decoration: none;
     color: #23284c;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
     margin-right: 30px;
 }
 .social__btn:last-child{
     margin-right: 0;
 }
-.social__btn i{
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-}
 .social__btn:hover{
     border-color: #23284c;
 }
-.social__btn:hover i{
+.social__btn:hover{
     color: #ffffff;
 }
 
@@ -1761,6 +1756,7 @@ a.userBlock__name:hover{
     .navMain ul a{
         padding-bottom: 0;
         font-size: 20px;
+        margin: auto;
     }
     .navMain ul a::after{
         content: '';
