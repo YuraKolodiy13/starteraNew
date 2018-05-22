@@ -1,20 +1,18 @@
 //tabs and partners slider
-let items = document.querySelectorAll('.projects__items');
-if(items.length !== 0){
-    [...items].forEach((item) => {
-        item.classList.add('hide');
-        if(item.children.length === 2 && document.body.clientWidth > 1199){
-            item.style.justifyContent = 'flex-start';
-            item.children[0].style.marginRight = '5%';
-        }
-    });
-    items[0].classList.remove('hide');
-}
+let items = document.querySelectorAll('.description__items');
+[...items].forEach((item) => {
+    item.classList.add('hide');
+    if(item.children.length === 2 && document.body.clientWidth > 1199){
+        item.style.justifyContent = 'flex-start';
+        item.children[0].style.marginRight = '5%';
+    }
+});
+items[0].classList.remove('hide');
 
 
 $(function () {
     $('.tabs a').click(function () {
-        $(this).parents('.projects__wrapper').find('.projects__items').addClass('hide');
+        $(this).parents('.description').find('.description__items').addClass('hide');
         $(this).parent().siblings().removeClass('active');
         var id = $(this).attr('href');
         $(id).removeClass('hide');
@@ -24,7 +22,7 @@ $(function () {
 
     $tabs = $('.tabs');
     $tabs.on('afterChange', function (event, slick, currentSlide, nextSlide) {
-        $(this).parents('.projects__wrapper').find('.projects__items').addClass('hide');
+        $(this).parents('.description').find('.description__items').addClass('hide');
         $(this).find('.slick-current').siblings().removeClass('active');
         var id = $(this).find('.slick-current a').attr('href');
         $(id).removeClass('hide');
@@ -61,6 +59,7 @@ projectActive.querySelector('.item__bar').style.width = projectActive.querySelec
 document.querySelector('.item__bar').style.width = document.querySelector('.item__percent').innerHTML;
 
 //search
+let item = document.querySelectorAll('.item');
 let search = document.querySelector('.search-button');
 let expand = () =>{
     search.parentElement.classList.toggle('open');

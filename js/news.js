@@ -10,6 +10,7 @@ let items = document.querySelectorAll('.projects__items');
 items[0].classList.remove('hide');
 
 //search
+let item = document.querySelectorAll('.item');
 let search = document.querySelector('.search-button');
 let expand = () =>{
     search.parentElement.classList.toggle('open');
