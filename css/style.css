@@ -339,9 +339,7 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: flex-end;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -356,13 +354,14 @@ body{
     text-decoration: none;
 }
 .navMain li{
-    text-align: center;
-    width: 120px;
+    width: 25%;
 }
 .navMain ul a{
     display: block;
     min-width: 60px;
     padding: 0 5px 6px;
+    width: max-content;
+    margin-left: auto;
 }
 .navMain a.active,
 .navMain ul a:hover{
@@ -611,8 +610,8 @@ a.userBlock__name:hover{
 }
 .item{
     width: 487px;
-    -webkit-box-shadow: 0 4px 6px 0 rgba(41, 41, 41, 0.14);
-    box-shadow: 0 4px 6px 0 rgba(41, 41, 41, 0.14);
+    -webkit-box-shadow: 0 4px 13px 0 rgba(56, 55, 64, 0.34);
+    box-shadow: 0 4px 13px 0 rgba(56, 55, 64, 0.34);
     position: relative;
     margin-bottom: 75px;
     -webkit-transition: .2s;
@@ -620,8 +619,8 @@ a.userBlock__name:hover{
     transition: .2s;
 }
 .item:hover{
-    -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .5);
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 4px 25px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, .5);
 }
 .item__img{
     max-height: 295px;
