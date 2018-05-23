@@ -79,10 +79,8 @@ burger.addEventListener('click', function () {
 
 //donate btn
 let donateItem = document.querySelectorAll('.donate__item');
-if(donateItem){
-    [...donateItem].forEach(item => {
-        if(item.querySelector('.donate__title span').innerHTML >= 500){
-            item.querySelector('.donate__btn').style.borderBottomColor = '#fff200';
-        }
-    })
-}
+[...donateItem].forEach(item => {
+    if(item.querySelector('.donate__title span').innerHTML >= 500){
+        item.querySelector('.donate__btn').style.borderBottomColor = '#fff200';
+    }
+})
