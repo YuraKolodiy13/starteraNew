@@ -10,10 +10,8 @@ let items = document.querySelectorAll('.projects__items');
 items[0].classList.remove('hide');
 
 let tabs = document.querySelectorAll('.tabs__link');
-if(items.length > 0){
-    for (let i = 0; i < tabs.length; i++){
-        tabs[i].innerHTML += ' (' + items[i].children.length + ')';
-    }
+for (let i = 0; i < tabs.length; i++){
+    tabs[i].innerHTML += ' (' + items[i].children.length + ')';
 }
 
 

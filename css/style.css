@@ -1891,6 +1891,25 @@ a.userBlock__name:hover{
         -ms-flex-align: center;
         align-items: center;
     }
+    .partners{
+        padding: 50px 20px;
+    }
+    .projects__all a,
+    .partners__link a{
+        padding-right: 70px;
+    }
+    .projects__all a::before,
+    .partners__link a::before,
+    .projects__all a::after,
+    .partners__link a::after{
+        right: 15px;
+    }
+    .projects__all a:hover::before,
+    .partners__link a:hover::before,
+    .projects__all a:hover::after,
+    .partners__link a:hover::after{
+        right: 5px;
+    }
 }
 
 @media (max-width: 579px) {
