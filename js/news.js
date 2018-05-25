@@ -12,6 +12,10 @@ items[0].classList.remove('hide');
 //search
 let item = document.querySelectorAll('.item');
 let search = document.querySelector('.search-button');
+
+if(document.body.clientWidth <= 1024){
+    search.parentElement.classList.add('open');
+}
 let expand = () =>{
     search.parentElement.classList.toggle('open');
     document.querySelector('.search-box').value = '';

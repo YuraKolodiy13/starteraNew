@@ -97,6 +97,10 @@ let expand = () =>{
 };
 search.addEventListener('click', expand);
 
+if(document.body.clientWidth <= 1024){
+    search.parentElement.classList.add('open');
+}
+
 //burger
 let burger = document.querySelector('.navMain__btn');
 let navList = document.querySelector('.navMain ul');

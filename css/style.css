@@ -113,7 +113,7 @@ body{
     display: flex;
     margin-bottom: 50px;
     position: relative;
-    z-index: 10;
+    z-index: 2;
 }
 .header__links span{
     -webkit-transform: skew(-27deg);
@@ -181,14 +181,14 @@ body{
 .header__links .add a{
     color: #fffefe;
 }
-.header__links .add a:hover{
+.header__links .add:hover a{
     color: #9aca3c;
 }
 .header__links .toSupport a{
     color: #9aca3c;
     padding-left: 55px;
 }
-.header__links .toSupport a:hover{
+.header__links .toSupport:hover a{
     color: #ffffff;
 }
 .header__links .add a::before,
@@ -245,23 +245,23 @@ body{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-.header__links .add a:hover::before{
+.header__links .add:hover a::before{
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     background-color: #9aca3c;
 }
-.header__links .add a:hover::after{
+.header__links .add:hover a::after{
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     background-color: #9aca3c;
 }
-.header__links .toSupport a:hover::before{
+.header__links .toSupport:hover a::before{
     background-color: #fff;
     right: 35px;
 }
-.header__links .toSupport a:hover::after{
+.header__links .toSupport:hover a::after{
     border-color: #fff;
     right: 36px;
 }
@@ -339,6 +339,8 @@ body{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -360,6 +362,8 @@ body{
     display: block;
     min-width: 60px;
     padding: 0 5px 6px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin-left: auto;
 }
@@ -573,9 +577,7 @@ a.userBlock__name:hover{
     left: 0;
     width: 100%;
     height: 160px;
-    background-color: #f9f9f9;
-    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
-    clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
+    background: url("../img/projects-bg.png") no-repeat;
 }
 .projects::after{
     content: "";
@@ -584,9 +586,10 @@ a.userBlock__name:hover{
     left: 0;
     width: 100%;
     height: 160px;
-    background-color: #f9f9f9;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    background: url("../img/projects-bg.png") no-repeat;
+    -webkit-transform: scale(-1, -1);
+    -ms-transform: scale(-1, -1);
+    transform: scale(-1, -1);
 }
 .projects__wrapper{
     max-width: 1670px;
@@ -629,9 +632,13 @@ a.userBlock__name:hover{
 .item__img img{
     max-width: 100%;
     height: auto;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .item__img img:hover{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 .item__info{
@@ -645,6 +652,8 @@ a.userBlock__name:hover{
     font-size: 24px;
     line-height: 51px;
     color: inherit;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 .item__title:hover{
@@ -1024,13 +1033,11 @@ a.userBlock__name:hover{
 .footer::before{
     content: "";
     position: absolute;
-    top: -159px;
+    top: -153px;
     left: 0;
     width: 100%;
-    height: 160px;
-    background-color: #9aca3c;
-    -webkit-clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
-    clip-path: polygon(0 100%, 0 100%, 100% 100%, 0 0);
+    height: 155px;
+    background: url("../img/footer-bg.png") no-repeat;
 }
 .footer__wrapper{
     max-width: 1670px;
@@ -1215,8 +1222,8 @@ a.userBlock__name:hover{
         height: 15px;
         right: 25px;
     }
-    .header__links .toSupport a:hover::before,
-    .header__links .toSupport a:hover::after{
+    .header__links .toSupport:hover a::before,
+    .header__links .toSupport:hover a::after{
         right: 20px;
     }
     .navMain{
@@ -1233,9 +1240,6 @@ a.userBlock__name:hover{
     .navMain ul{
         margin-right: 50px;
     }
-    .userBlock{
-        width: 190px;
-    }
     .userBlock__name::after{
         background-size: 70%;
         margin-top: 5px;
@@ -1249,14 +1253,6 @@ a.userBlock__name:hover{
     }
     .projects{
         padding: 0;
-    }
-    .projects::before{
-        height: 120px;
-        top: -119px;
-    }
-    .projects::after{
-        height: 120px;
-        bottom: -119px;
     }
     .projects__wrapper{
         max-width: none;
@@ -1274,7 +1270,7 @@ a.userBlock__name:hover{
     }
     .partners{
         padding: 50px 50px;
-        margin: 50px 0;
+        margin: 100px 0 50px 0;
         max-width: none;
     }
     .slider__items{
@@ -1331,10 +1327,6 @@ a.userBlock__name:hover{
         font-size: 24px;
         margin-right: 10px;
     }
-    .footer::before{
-        height: 120px;
-        top: -119px;
-    }
     .footerNav__item{
         width: 33%;
     }
@@ -1365,6 +1357,15 @@ a.userBlock__name:hover{
     .userBlock__name::before{
         right: -15px;
         font-size: 30px;
+    }
+    .projects::before,
+    .footer::before{
+        height: 120px;
+        top: -119px;
+    }
+    .projects::after{
+        height: 120px;
+        bottom: -119px;
     }
     .projects__items{
         padding: 0;
@@ -1411,7 +1412,6 @@ a.userBlock__name:hover{
         -ms-flex-pack: start;
         justify-content: flex-start;
         position: absolute;
-        z-index: 10;
         bottom: 80px;
     }
     .header__links .add{
@@ -1442,8 +1442,8 @@ a.userBlock__name:hover{
     .header__links .toSupport::before{
         width: 18px;
     }
-    .header__links .toSupport a:hover::before,
-    .header__links .toSupport a:hover::after{
+    .header__links .toSupport:hover a::before,
+    .header__links .toSupport:hover a::after{
         right: -5px;
     }
     .navMain a{
@@ -1496,13 +1496,14 @@ a.userBlock__name:hover{
         font-size: 20px;
         line-height: 28px;
     }
-    .projects::before{
-        height: 80px;
-        top: -79px;
+    .projects::before,
+    .footer::before{
+        height: 100px;
+        top: -99px;
     }
     .projects::after{
-        height: 80px;
-        bottom: -79px;
+        height: 100px;
+        bottom: -99px;
     }
     .projects__wrapper{
         padding-top: 30px;
@@ -1551,10 +1552,6 @@ a.userBlock__name:hover{
     .footer{
         padding-bottom: 30px;
     }
-    .footer::before{
-        height: 80px;
-        top: -79px;
-    }
     .footerNav p{
         font-size: 20px;
         line-height: 40px;
@@ -1582,6 +1579,134 @@ a.userBlock__name:hover{
     }
 }
 
+@media (max-width: 1024px) {
+    .header__wrapper{
+        margin-top: 0;
+    }
+    .navMain__btn{
+        display: block;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+    .navMain__btn.open span{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .navMain__btn.open span::before{
+        left: 50%;
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .navMain__btn.open span::after{
+        left: 50%;
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .navMain ul{
+        opacity: 0;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        top: -300px;
+        right: -50px;
+        padding: 30px 0 100px;
+        width: auto;
+        left: -50px;
+    }
+    .navMain{
+        top: 0;
+        padding: 15px 0 40px;
+        margin-bottom: 0;
+    }
+    .navMain ul.visible{
+        -webkit-transform: translate(0, 65px);
+        -ms-transform: translate(0, 65px);
+        transform: translate(0, 65px);
+        opacity: 1;
+        top: -65px;
+        background-color: rgba(255, 255, 255, .9);
+        -webkit-box-shadow: 0 2px 15px #9aca3c;
+        box-shadow: 0 2px 15px #9aca3c;
+    }
+    .navMain__wrapper{
+        position: static;
+    }
+    .navMain__btn{
+        top: 27px;
+    }
+    .navMain li{
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .navMain ul a{
+        padding-bottom: 0;
+        font-size: 20px;
+        margin: auto;
+    }
+    .navMain ul a::after{
+        content: '';
+        width: auto;
+        height: 4px;
+        background-color: #fff;
+        display: block;
+        -webkit-transform: skew(-45deg);
+        -ms-transform: skew(-45deg);
+        transform: skew(-45deg);
+        padding: 0;
+    }
+    .user__wrapper{
+        position: absolute;
+        top: -150px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .userBlock{
+        margin: auto;
+    }
+    .search{
+        margin: auto;
+    }
+    .search.open{
+        width: 170px;
+    }
+    .navMain ul.visible + .user__wrapper{
+        top: 210px;
+    }
+    .userBlock__name::before{
+        display: none;
+    }
+    .navMain a{
+        padding: 5px;
+    }
+    .userBlock a{
+        padding-right: 30px;
+    }
+    .search,
+    .search.open{
+        margin-top: 2px;
+    }
+    .userBlock__name::after{
+        right: -20px;
+    }
+}
 @media (max-width: 991px){
     .header__info h2{
         font-size: 60px;
@@ -1598,15 +1723,17 @@ a.userBlock__name:hover{
     .header__links a{
         padding: 0 20px;
     }
-    .navMain__wrapper{
-        width: 60%;
-    }
-    .navMain ul{
-        width: 100%;
-        margin-right: 0;
-    }
     .navMain__logo{
         margin-right: 100px;
+    }
+    .projects::before,
+    .footer::before{
+        height: 85px;
+        top: -84px;
+    }
+    .projects::after {
+        height: 85px;
+        bottom: -84px;
     }
     .tabs{
         margin-bottom: 40px;
@@ -1647,16 +1774,12 @@ a.userBlock__name:hover{
     .item__info{
         font-size: 14px;
     }
-    .user__wrapper{
-        position: absolute;
-        top: 50px;
-        right: 0;
-    }
 }
 
 @media (max-width: 767px) {
     .header__wrapper{
         margin-top: 0;
+        padding: 0 20px;
     }
     .header__links{
         -webkit-box-orient: vertical;
@@ -1694,111 +1817,18 @@ a.userBlock__name:hover{
     .navMain__logo{
         margin-right: 20px;
     }
-    .navMain__btn{
-        display: block;
-        -webkit-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s;
-    }
-    .navMain__btn.open span{
-        background-color: rgba(255, 255, 255, 0);
-    }
-    .navMain__btn.open span::before{
-        left: 50%;
-        top: 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    .navMain__btn.open span::after{
-        left: 50%;
-        top: 0;
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
     .navMain ul{
-        opacity: 0;
-        -webkit-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s;
-        flex-direction: column;
-        position: absolute;
-        top: -300px;
-        right: -20px;
-        padding: 30px 0 100px;
-        width: auto;
-        left: -20px;
+        left: -30px;
+        right: -40px;
     }
-    .navMain{
-        top: 0;
-        padding: 15px 0 70px;
-        margin-bottom: 0;
+    .projects::before,
+    .footer::before{
+        height: 65px;
+        top: -64px;
     }
-    .navMain ul.visible{
-        -webkit-transform: translate(0, 65px);
-        -ms-transform: translate(0, 65px);
-        transform: translate(0, 65px);
-        opacity: 1;
-        top: -65px;
-        background-color: rgba(255, 255, 255, .9);
-        box-shadow: 0 2px 15px #9aca3c;
-    }
-    .navMain__wrapper{
-        position: static;
-    }
-    .navMain__btn{
-        top: 27px;
-    }
-    .navMain li{
-        margin-bottom: 15px;
-    }
-    .navMain ul a{
-        padding-bottom: 0;
-        font-size: 20px;
-        margin: auto;
-    }
-    .navMain ul a::after{
-        content: '';
-        width: auto;
-        height: 4px;
-        background-color: #fff;
-        display: block;
-        transform: skew(-45deg);
-        padding: 0;
-    }
-    .user__wrapper{
-        top: -150px;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: .5s;
-        flex-direction: column;
-    }
-    .userBlock{
-        margin: auto;
-        width: 170px;
-    }
-    .search{
-        margin: auto;
-    }
-    .search.open{
-        width: 170px;
-    }
-    .navMain ul.visible + .user__wrapper{
-        top: 210px;
-    }
-    .userBlock__name::before{
-        display: none;
-    }
-    .navMain a{
-        padding: 5px;
-    }
-    .userBlock a{
-        padding-right: 30px;
-    }
-    .search,
-    .search.open{
-        margin-top: 2px;
+    .projects::after {
+        height: 65px;
+        bottom: -64px;
     }
     .item{
         width: 100%;
@@ -1818,14 +1848,8 @@ a.userBlock__name:hover{
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-    .header__wrapper{
-        padding: 0 20px;
-    }
     .projects__wrapper{
         padding: 30px 20px 0;
-    }
-    .userBlock__name::after{
-        right: -20px;
     }
     .subscribe label,
     .btn__wrap{
@@ -1917,7 +1941,6 @@ a.userBlock__name:hover{
         margin-bottom: 0;
     }
     .header__wrapper{
-        padding: 0 20px;
         margin-bottom: 100px;
     }
     .header__info{
@@ -2102,8 +2125,8 @@ a.userBlock__name:hover{
     }
     .projects::before,
     .footer::before{
-        height: 40px;
-        top: -39px;
+        height: 50px;
+        top: -49px;
     }
     .projects::after{
         height: 40px;
@@ -2113,5 +2136,10 @@ a.userBlock__name:hover{
 @media (max-width: 424px) {
     .social__btn {
         margin: 5px;
+    }
+    .projects::before,
+    .footer::before{
+        height: 40px;
+        top: -39px;
     }
 }
