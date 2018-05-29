@@ -13,6 +13,7 @@ Text Domain: startera
 
 @import "news-style.css";
 @import "project-style.css";
+@import "news(1item)-style.css";
 
 @font-face {
     font-family: 'SFProDisplayThin';
