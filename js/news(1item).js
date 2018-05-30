@@ -36,10 +36,16 @@ burger.addEventListener('click', function () {
 let content = document.querySelector('.newsActive__wrapper');
 let wrapper = document.querySelector('.newsActive');
 
-if(document.body.clientWidth > 1399){
-    wrapper.style.height = parseInt(getComputedStyle(content).height) - 500 + 'px';
-}else if(document.body.clientWidth > 579){
-    wrapper.style.height = parseInt(getComputedStyle(content).height) - 400 + 'px';
-}else{
-    wrapper.style.height = parseInt(getComputedStyle(content).height) - 200 + 'px';
-}
+$(window).on('resize load', function () {
+    if($(window).width() > 1399){
+        wrapper.style.height = parseInt(getComputedStyle(content).height) - 500 + 'px';
+        return;
+    }
+    if($(window).width() > 579){
+        wrapper.style.height = parseInt(getComputedStyle(content).height) - 400 + 'px';
+        return;
+    }
+    else {
+        wrapper.style.height = parseInt(getComputedStyle(content).height) - 200 + 'px';
+    }
+});
